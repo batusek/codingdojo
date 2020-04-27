@@ -13,7 +13,8 @@ class Category(Enum):
     THREEOFAKIND = 9
     FOUROFAKIND = 10
     SMALL = 11
-    YAHTSEE = 12
+    LARGE = 12
+    YAHTSEE = 13
 
 class Numbers(object):
     def __init__(self,num):
@@ -38,6 +39,23 @@ class Kind(object):
             if frequencies[key]>=self.num:
                 result += self.num*key
         return result
+
+
+class Sequence(object):
+    def __init__(self,len,value):
+        self.len = len
+        self.value = value
+    
+    def score(self,values):
+        values.sort()
+        last = values[0]
+        sequencelen = 1
+        for v in values[1:]:
+            if v==last+1:
+                sequencelen += 1
+            last = v
+
+        return self.value if sequencelen>=self.len else 0
 
 
 
@@ -65,17 +83,6 @@ class Yahtsee(object):
             score = Kind(5).score(values)
             return 50 if score>0 else 0
 
-        def small(values):
-            values.sort()
-            last = values[0]
-            sequencelen = 1
-            for v in values[1:]:
-                if v==last+1:
-                    sequencelen += 1
-                last = v
-
-            return 30 if sequencelen>=4 else 0
-
         switcher={
             Category.ONES:Numbers(1).score,
             Category.TWOS:Numbers(2).score,
@@ -87,7 +94,8 @@ class Yahtsee(object):
             Category.TWOPAIRS:twopairs,
             Category.THREEOFAKIND:Kind(3).score,
             Category.FOUROFAKIND:Kind(4).score,
-            Category.SMALL:small,            
+            Category.SMALL:Sequence(4,30).score,            
+            Category.LARGE:Sequence(5,40).score,            
             Category.YAHTSEE:yahtsee,
         }
         func = switcher.get(category,lambda values:None)
