@@ -39,6 +39,13 @@ class NumberTest(unittest.TestCase):
     def test_four_of_a_kind_scores_sum_of_four_matching_dice(self):
         self.assertEquals(12,Yahtsee().score(Category.FOUROFAKIND,[2,3,3,3,3]))
 
+    def test_yahtsee_scores_zero_if_five_matching_dice_not_present(self):
+        self.assertEquals(0,Yahtsee().score(Category.YAHTSEE,[2,3,3,3,3]))
+
+    def test_yahtsee_scores_50_if_five_matching_dice_present(self):
+        self.assertEquals(50,Yahtsee().score(Category.YAHTSEE,[3,3,3,3,3]))
+
+
 
 if __name__ == '__main__':
     unittest.main()
