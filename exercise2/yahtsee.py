@@ -15,6 +15,7 @@ class Category(Enum):
     SMALL = 11
     LARGE = 12
     YAHTSEE = 13
+    CHANCE = 14
 
 class Numbers(object):
     def __init__(self,num):
@@ -83,6 +84,9 @@ class Yahtsee(object):
             score = Kind(5).score(values)
             return 50 if score>0 else 0
 
+        def chance(values):
+            return sum(values)
+
         switcher={
             Category.ONES:Numbers(1).score,
             Category.TWOS:Numbers(2).score,
@@ -97,6 +101,7 @@ class Yahtsee(object):
             Category.SMALL:Sequence(4,30).score,            
             Category.LARGE:Sequence(5,40).score,            
             Category.YAHTSEE:yahtsee,
+            Category.CHANCE:chance,
         }
         func = switcher.get(category,lambda values:None)
         return func(values)

@@ -54,8 +54,8 @@ class NumberTest(unittest.TestCase):
     def test_large_straight_scores_40_if_five_consecutive_dice_present(self):
         self.assertEquals(40,Yahtsee().score(Category.LARGE,[1,2,3,4,5]))
 
-
-
+    def test_chance_sums_all_dice(self):
+        self.assertEquals(16,Yahtsee().score(Category.CHANCE,[1,2,2,5,6]))
 
 if __name__ == '__main__':
     unittest.main()
