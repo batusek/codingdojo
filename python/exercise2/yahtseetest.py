@@ -27,6 +27,12 @@ class NumberTest(unittest.TestCase):
     def test_two_pairs_score_sum_of_two_pairs_dice(self):
         self.assertEquals(14,Yahtsee().score(Category.TWOPAIRS,[2,2,4,5,5]))
 
+    def test_three_of_a_kind_scores_zero_if_three_matching_dice_not_present(self):
+        self.assertEquals(0,Yahtsee().score(Category.THREEOFAKIND,[2,3,3,5,6]))
+
+    def test_three_of_a_kind_scores_sum_of_three_matching_dice(self):
+        self.assertEquals(9,Yahtsee().score(Category.THREEOFAKIND,[2,3,3,3,6]))
+
 
 if __name__ == '__main__':
     unittest.main()

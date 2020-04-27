@@ -10,6 +10,7 @@ class Category(Enum):
     SIXES = 6
     PAIR = 7
     TWOPAIRS = 8
+    THREEOFAKIND = 9
 
 class Numbers(object):
     def __init__(self,num):
@@ -44,6 +45,14 @@ class Yahtsee(object):
                     pairs += 1
             return result if pairs==2 else 0
 
+        def threeofakind(values):
+            frequencies = collections.Counter(values)
+            result = 0
+            for key in frequencies:                
+                if frequencies[key]>=3:
+                    result += 3*key
+            return result
+
         switcher={
             Category.ONES:Numbers(1).score,
             Category.TWOS:Numbers(2).score,
@@ -52,7 +61,8 @@ class Yahtsee(object):
             Category.FIVES:Numbers(5).score,
             Category.SIXES:Numbers(6).score,
             Category.PAIR:pair,
-            Category.TWOPAIRS:twopairs
+            Category.TWOPAIRS:twopairs,
+            Category.THREEOFAKIND:threeofakind
         }
         func = switcher.get(category,lambda values:None)
         return func(values)
