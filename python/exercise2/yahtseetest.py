@@ -15,6 +15,10 @@ class NumberTest(unittest.TestCase):
     def test_score_to_sixes_is_equal_to_sum_of_dice_that_read_six(self):
         self.assertEquals(18,Yahtsee().score(Category.SIXES,[2,3,6,6,6]))
 
+    def test_pair_scores_as_sum_of_two_highest_matching_dice(self):
+        self.assertEquals(12,Yahtsee().score(Category.PAIR,[2,3,6,6,6]))
+
+
 
 if __name__ == '__main__':
     unittest.main()
