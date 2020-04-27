@@ -45,6 +45,12 @@ class NumberTest(unittest.TestCase):
     def test_yahtsee_scores_50_if_five_matching_dice_present(self):
         self.assertEquals(50,Yahtsee().score(Category.YAHTSEE,[3,3,3,3,3]))
 
+    def test_small_straight_scores_30_if_four_consecutive_dice_present(self):
+        self.assertEquals(30,Yahtsee().score(Category.SMALL,[1,2,3,4,6]))
+
+    def test_small_straight_scores_0_if_four_consecutive_dice_not_present(self):
+        self.assertEquals(30,Yahtsee().score(Category.SMALL,[1,2,3,5,6]))
+
 
 
 if __name__ == '__main__':
