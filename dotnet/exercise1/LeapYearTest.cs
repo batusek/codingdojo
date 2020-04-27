@@ -4,10 +4,14 @@ namespace LeapYear
 {
     public class LeapYearTest
     {
-        [Fact]
-        public void NormalYearIsNotLeapYear()
+        [Theory]
+        [InlineData(1789, false)]
+        [InlineData(1788, true)]
+        [InlineData(1800, false)]
+        [InlineData(2000, true)]
+        public void LeapYearTestCases(int year, bool expected)
         {
-            Assert.False(LeapYear.IsLeapYear(1789));
+            Assert.Equal(expected,LeapYear.IsLeapYear(year));
         }
     }
 
