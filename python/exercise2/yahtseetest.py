@@ -18,6 +18,14 @@ class NumberTest(unittest.TestCase):
     def test_pair_scores_as_sum_of_two_highest_matching_dice(self):
         self.assertEquals(12,Yahtsee().score(Category.PAIR,[2,3,6,6,6]))
 
+    def test_pair_scores_zero_if_no_two_dice_match(self):
+        self.assertEquals(0,Yahtsee().score(Category.PAIR,[2,3,4,5,6]))
+
+    def test_two_pairs_score_zero_if_there_are_less_than_two_pairs(self):
+        self.assertEquals(0,Yahtsee().score(Category.TWOPAIRS,[2,2,4,5,6]))
+
+    def test_two_pairs_score_sum_of_two_pairs_dice(self):
+        self.assertEquals(14,Yahtsee().score(Category.TWOPAIRS,[2,2,4,5,5]))
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 from enum import Enum
+import collections
 
 class Category(Enum):
     ONES = 1
@@ -8,6 +9,7 @@ class Category(Enum):
     FIVES = 5
     SIXES = 6
     PAIR = 7
+    TWOPAIRS = 8
 
 class Numbers(object):
     def __init__(self,num):
@@ -32,6 +34,16 @@ class Yahtsee(object):
 
             return 0
 
+        def twopairs(values):
+            frequencies = collections.Counter(values)
+            result = 0
+            pairs = 0
+            for key in frequencies:
+                if frequencies[key]>=2:
+                    result += 2*key
+                    pairs += 1
+            return result if pairs==2 else 0
+
         switcher={
             Category.ONES:Numbers(1).score,
             Category.TWOS:Numbers(2).score,
@@ -39,7 +51,8 @@ class Yahtsee(object):
             Category.FOURS:Numbers(4).score,
             Category.FIVES:Numbers(5).score,
             Category.SIXES:Numbers(6).score,
-            Category.PAIR:pair
+            Category.PAIR:pair,
+            Category.TWOPAIRS:twopairs
         }
         func = switcher.get(category,lambda values:None)
         return func(values)
