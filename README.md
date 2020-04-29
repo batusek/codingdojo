@@ -14,9 +14,14 @@
 - Checkout repo `git clone https://github.com/batusek/tddtraining.git`
 - Start Visual Studio Code
 - Command Palette (F1): Select **Remote-Containers: Open Folder in Container...** and Select folder where you cloned the git repo
-- Command Palette (F1): **Python: Run All Tests** or go to Test Explorer and click on the green arrow icon
 
+### Python
+- Command Palette (F1): **Python: Run All Tests** or go to Test Explorer and click on the green arrow icon
 The only existing test in `exercise1/leapyeartest.py` should fail
+
+### .Net
+- Type "dotnet test" in terminal
+The only existing test in `exercise1/LeapYearTest.cs` should fail
 
 # Exercises
 
