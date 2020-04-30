@@ -1,20 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Numbers
 {
     public class NumbersInWords
     {
-        public static String PrintNumber(int number)
+        private static String PrintOnes(int number)
         {
             var ones = new List<String>() { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 
             "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
 
+            return ones[number];
+
+        }
+        public static String PrintNumber(int number)
+        {
+            var ones = new List<String>() { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 
+            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
+            var tens = new List<String>() { "", "", "twenty" };
+
+
+            var result = new StringBuilder();
 
             if (number<20)
-                return ones[number];
+                result.Append(PrintOnes(number));
             else
-                return "twenty";
+                result.Append(tens[number/10]);
+                var remainder = number - 20;
+                if (remainder > 0)
+                    result.Append(" ").Append(PrintOnes(remainder));
+            
+            return result.ToString();
         }
     }
 }
