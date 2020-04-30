@@ -18,18 +18,19 @@ namespace Numbers
         {
             var ones = new List<String>() { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 
             "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
-            var tens = new List<String>() { "", "", "twenty" };
+            var tens = new List<String>() { "", "", "twenty", "thirty" };
 
 
             var result = new StringBuilder();
 
-            if (number<20)
+            if (number<20) {
                 result.Append(PrintOnes(number));
-            else
+            } else {
                 result.Append(tens[number/10]);
-                var remainder = number - 20;
+                var remainder = number % 10;
                 if (remainder > 0)
                     result.Append(" ").Append(PrintOnes(remainder));
+            }
             
             return result.ToString();
         }
