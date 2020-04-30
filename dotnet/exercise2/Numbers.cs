@@ -19,7 +19,9 @@ namespace Numbers
             var tens = new List<String>() { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
             var result = new StringBuilder();
 
-            if (number>=20) {
+            if (number>=100) {
+                return "one hundred";
+            } else if (number>=20) {
                 result.Append(tens[number/10]);
                 var remainder = number % 10;
                 if (remainder > 0)
