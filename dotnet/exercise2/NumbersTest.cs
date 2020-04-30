@@ -15,7 +15,7 @@ namespace Numbers
         [InlineData(164, "one hundred and sixty four")]
         public void PrintNumberUniversalTest(int input, string expected)
         {
-            Assert.Equal(expected,NumbersInWords.PrintNumber(input));
+            Assert.Equal(expected,new NumbersInWords().PrintNumber(input));
         }
     }
 
