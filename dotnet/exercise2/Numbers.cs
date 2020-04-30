@@ -16,11 +16,7 @@ namespace Numbers
         }
         public static String PrintNumber(int number)
         {
-            var ones = new List<String>() { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 
-            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" };
-            var tens = new List<String>() { "", "", "twenty", "thirty" };
-
-
+            var tens = new List<String>() { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
             var result = new StringBuilder();
 
             if (number<20) {
