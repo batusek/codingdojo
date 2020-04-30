@@ -4,16 +4,12 @@ namespace Numbers
 {
     public class NumbersTest
     {
-        [Fact]
-        public void OneReadsAsOne()
+        [Theory]
+        [InlineData(1, "one")]
+        [InlineData(2, "two")]
+        public void PrintNumberUniversalTest(int input, string expected)
         {
-            Assert.Equal("one",NumbersInWords.PrintNumber(1));
-        }
-
-        [Fact]
-        public void TwoReadsAsTwo()
-        {
-            Assert.Equal("two",NumbersInWords.PrintNumber(2));
+            Assert.Equal(expected,NumbersInWords.PrintNumber(input));
         }
     }
 
