@@ -12,7 +12,7 @@ namespace Numbers
         [InlineData(21, "twenty one")]
         [InlineData(99, "ninety nine")]
         [InlineData(100, "one hundred")]
-        [InlineData(164, "one hundred and sixty four")]
+        [InlineData(999, "nine hundred and ninety nine")]
         public void PrintNumberUniversalTest(int input, string expected)
         {
             Assert.Equal(expected,new NumbersInWords().PrintNumber(input));
