@@ -19,13 +19,13 @@ namespace Numbers
             var tens = new List<String>() { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
             var result = new StringBuilder();
 
-            if (number<20) {
-                result.Append(PrintOnes(number));
-            } else {
+            if (number>=20) {
                 result.Append(tens[number/10]);
                 var remainder = number % 10;
                 if (remainder > 0)
                     result.Append(" ").Append(PrintOnes(remainder));
+            } else {
+                result.Append(PrintOnes(number));
             }
             
             return result.ToString();
