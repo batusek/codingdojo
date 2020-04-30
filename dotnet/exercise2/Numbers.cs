@@ -7,7 +7,8 @@ namespace Numbers
     {
         public static String PrintNumber(int number)
         {
-            var ones = new List<String>() { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            var ones = new List<String>() { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 
+            "ten" };
 
             return ones[number];
         }
