@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Numbers
 {
@@ -6,6 +7,7 @@ namespace Numbers
     {
         public static String PrintNumber(int number)
         {
+            return "one";
         }
     }
 }
