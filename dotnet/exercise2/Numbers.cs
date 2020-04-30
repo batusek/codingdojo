@@ -20,7 +20,7 @@ namespace Numbers
             var result = new StringBuilder();
 
             if (number>=100) {
-                return "one hundred";
+                result.Append(PrintOnes(number/100)).Append(" hundred");
             } else if (number>=20) {
                 result.Append(tens[number/10]);
                 var remainder = number % 10;
