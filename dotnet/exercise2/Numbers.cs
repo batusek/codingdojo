@@ -16,7 +16,6 @@ namespace Numbers
         }
         public String PrintNumber(int number)
         {
-            var tens = new List<String>() { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
             var result = new StringBuilder();
 
             if (number>=100) {
@@ -25,6 +24,7 @@ namespace Numbers
                 if (remainder>0) 
                     result.Append(" and ").Append(PrintNumber(remainder));
             } else if (number>=20) {
+                var tens = new List<String>() { "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
                 result.Append(tens[number/10]);
                 var remainder = number % 10;
                 if (remainder > 0)
