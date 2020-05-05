@@ -30,10 +30,12 @@ The first exercise is trivial from the programming point of view and its main pu
 The exercise comes from http://codingdojo.org/kata/LeapYears/
 To finish it it should be enough to write 4 tests and appropriate code inside one function. Please write the production code one test at a time!
 
-## Exercise 2  TDD on a new code (almost no refactor)
-E.g. http://codingdojo.org/kata/Mastermind/ or http://codingdojo.org/kata/NumbersInWords/
+## Exercise 2  Practice baby steps
+Try to do as many Red-Green-Refactor cycles as you can. One cycle should not take more than 1 minute.
+The exercise comes from http://codingdojo.org/kata/NumbersInWords/
 
 
+# TODO
 ## Exercise X Refactor and existing class/method
 E.g. http://codingdojo.org/kata/GildedRose/
 
