@@ -14,6 +14,7 @@ class HtmlFormatter:
 
         f.write("</tr></table>\n")
         f.write("</body></html>\n")
+        f.close()
 
 
 if __name__ == '__main__':
