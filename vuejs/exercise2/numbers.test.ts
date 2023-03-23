@@ -10,7 +10,8 @@ test.each([
     [21, "twenty one"],
     [99, "ninety nine"],
     [100, "one hundred"],
-    [135, "one hundred and thirty five"]
+    [135, "one hundred and thirty five"],
+    [987, "nine hundred and eighty seven"]
 ])("%i prints as %s", (number, expected) => {
     expect(NumbersInWords.printNumber(number)).toBe(expected);
 })
