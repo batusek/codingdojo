@@ -23,6 +23,10 @@ The only existing test in `exercise1/leapyeartest.py` should fail
 - Type "dotnet test" in terminal
 The only existing test in `exercise1/LeapYearTest.cs` should fail
 
+### Javascript / Vue.js
+- Type "npm test" in terminal
+The only existing test in `exercise1/leapyear.test.ts` should fail
+
 # Exercises
 
 ## Exercise 1 - Embrace the tooling
