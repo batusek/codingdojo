@@ -4,6 +4,9 @@ export class NumbersInWords {
                     "ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
         const tens = ["", "", "twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
 
+        if (number>=100)
+            return "one hundred";
+            
         if (number<20)
             return ones[number];
 
