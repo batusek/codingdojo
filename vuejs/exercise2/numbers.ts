@@ -7,9 +7,8 @@ export class NumbersInWords {
         if (number<20)
             return ones[number];
 
-        var ten:number = Math.floor(number/10);
-        var result = tens[ten];
-        var remainder = number - ten*10;
+        var result = tens[Math.floor(number/10)];
+        var remainder = number % 10;
         if (remainder>0)
             result += " " + ones[remainder];
 
