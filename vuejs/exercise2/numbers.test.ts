@@ -8,7 +8,8 @@ test.each([
     [19, "nineteen"],
     [20, "twenty"],
     [21, "twenty one"],
-    [99, "ninety nine"]
+    [99, "ninety nine"],
+    [100, "one hundred"]
 ])("%i prints as %s", (number, expected) => {
     expect(NumbersInWords.printNumber(number)).toBe(expected);
 })
