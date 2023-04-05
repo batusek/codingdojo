@@ -80,3 +80,8 @@ test("illegal character", () => {
     let input = "123G:123f:123f:123f:123f:123f:123f:123f"
     expect(new IPv6Address(input).contract()).toBeFalsy();
 });
+
+test("too many groups", () => {
+    let input = "123f:123f:123f:123f:123f:123f:123f:123f:123f"
+    expect(new IPv6Address(input).contract()).toBeFalsy();
+});
