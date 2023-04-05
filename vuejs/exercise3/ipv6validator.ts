@@ -15,12 +15,12 @@ export class IPv6Address {
 
     private contractComponent(component:string): string {
         if (this.isZero(component))
-            return "0"
+            return "0";
 
         if (component.startsWith("0"))
-            return this.contractComponent(component.substring(1))
+            return this.contractComponent(component.substring(1));
 
-        return component
+        return component.toLowerCase();
     }
 
     contract(): string {
