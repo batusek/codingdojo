@@ -23,11 +23,18 @@ export class IPv6Address {
         return component.toLowerCase();
     }
 
+    contractZeros(output: string): string {
+        var result = output.replace("0:0","")
+        return result;
+    }
+
     contract(): string {
         var components = this.address.split(":")
 
         for(let i=0; i<components.length; i++)
-            components[i] = this.contractComponent(components[i])
-        return components.join(":");
+            components[i] = this.contractComponent(components[i])   
+
+        var intermediate = components.join(":");
+        return this.contractZeros(intermediate);
     }
 }
