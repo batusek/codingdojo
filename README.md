@@ -23,6 +23,11 @@ The only existing test in `exercise1/leapyeartest.py` should fail
 - Type "dotnet test" in terminal
 The only existing test in `exercise1/LeapYearTest.cs` should fail
 
+### vuejs
+- Type "npm run test" in terminal
+The only existing test in `exercise1/LeapYearTest.vue` should fail
+
+
 # Exercises
 
 ## Exercise 1 - Embrace the tooling
@@ -45,6 +50,9 @@ Instructions: [IPv6 address validator](https://www.codewars.com/kata/54fa4e21060
 ## Exercise X - Refactor and existing class/method
 E.g. http://codingdojo.org/kata/GildedRose/
 
+## Exercise X Testing asynchronous functions
+
+
 ## Exercise X Get rid of dependency
-E.g. https://github.com/sandromancuso/trip-service-kata
+E.g. https://github.com/sandromancuso/trip-service-kata or HTML formatter
 
