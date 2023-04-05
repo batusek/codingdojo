@@ -75,3 +75,8 @@ test("from two equally-long groups of zeros, only one is contracted to double co
     let input = "123f:0000:0000:123f:123f:0000:0000:123f"
     expect(new IPv6Address(input).contract()).toEqual("123f::123f:123f:0:0:123f");
 });
+
+test("illegal character", () => {
+    let input = "123G:123f:123f:123f:123f:123f:123f:123f"
+    expect(new IPv6Address(input).contract()).toBeFalsy();
+});
