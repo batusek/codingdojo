@@ -76,7 +76,11 @@ export class IPv6Address {
 
         var components = this.address.split(":")
 
+
         try {
+            if (components.length>8)
+                throw new IPv6ParsingError("Too many groups")
+
             for(let i=0; i<components.length; i++)
                 components[i] = this.contractComponent(components[i])   
 
