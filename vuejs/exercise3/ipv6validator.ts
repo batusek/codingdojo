@@ -1,4 +1,4 @@
-export class IPv6Validator {
+export class IPv6Address {
     address: string;
 
     constructor(input:string) {
