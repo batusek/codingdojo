@@ -61,7 +61,7 @@ test("seven subsequent zero components are contracted to double colon", () => {
     expect(new IPv6Address(input).contract()).toEqual("::123f");
 });
 
-test("seven subsequent zero components are contracted to double colon", () => {
+test("eight subsequent zero components are contracted to double colon", () => {
     let input = "0000:0000:0000:0000:0000:0000:0000:0000"
     expect(new IPv6Address(input).contract()).toEqual("::");
 });
