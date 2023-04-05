@@ -1,3 +1,10 @@
+class IPv6ParsingError extends Error {
+    constructor(message:string) {
+        super(message);
+        this.name = "IPv6ParsingError";
+    }
+}
+
 export class IPv6Address {
     address: string;
 
@@ -14,13 +21,17 @@ export class IPv6Address {
     }
 
     private contractComponent(component:string): string {
+        component = component.toLowerCase();
+        if (!/^[0-9a-f]+$/.test(component))
+            throw new IPv6ParsingError("invalid character")
+
         if (this.isZero(component))
             return "0";
 
         if (component.startsWith("0"))
             return this.contractComponent(component.substring(1));
 
-        return component.toLowerCase();
+        return component;
     }
 
     private contractOneGroupOfZeros(input: string, group: string, replacement: string = ""): string|boolean {
@@ -59,13 +70,23 @@ export class IPv6Address {
         return result;
     }
 
-    contract(): string {
+    contract(): string | boolean {
+        if (this.address =="::")
+            return this.address
+
         var components = this.address.split(":")
 
-        for(let i=0; i<components.length; i++)
-            components[i] = this.contractComponent(components[i])   
+        try {
+            for(let i=0; i<components.length; i++)
+                components[i] = this.contractComponent(components[i])   
 
-        var intermediate = components.join(":");
-        return this.contractZeros(intermediate);
+            var intermediate = components.join(":");
+            return this.contractZeros(intermediate);
+        } catch (e) {
+            if (e instanceof IPv6ParsingError)
+                return false;
+
+            throw e;
+        }
     }
 }
