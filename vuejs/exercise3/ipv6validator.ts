@@ -23,15 +23,26 @@ export class IPv6Address {
         return component.toLowerCase();
     }
 
+    private contractOneGroupOfZeros(input: string, group: string, replacement: string = ""): string{
+        var output = input.replace(group,replacement)
+        return output
+    }
+
     private contractZeros(output: string): string {
         var result = output;
-        result = result.replace("0:0:0:0:0:0:0:0","::")
-        result = result.replace("0:0:0:0:0:0:0","")
-        result = result.replace("0:0:0:0:0:0","")
-        result = result.replace("0:0:0:0:0","")
-        result = result.replace("0:0:0:0","")
-        result = result.replace("0:0:0","")
-        result = result.replace("0:0","")
+        var replacements = [
+            ["0:0:0:0:0:0:0:0","::"],
+            ["0:0:0:0:0:0:0",""],
+            ["0:0:0:0:0:0",""],
+            ["0:0:0:0:0",""],
+            ["0:0:0:0",""],
+            ["0:0:0",""],
+            ["0:0",""],
+        ]
+
+        for (var i=0; i<replacements.length;i++) {
+            result = this.contractOneGroupOfZeros(result,replacements[i][0], replacements[i][1])
+        }
 
         if (/^[0-9a-f]:$/.test(result.slice(-2)))
             result = result + ":"
