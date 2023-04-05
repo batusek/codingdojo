@@ -3,6 +3,6 @@ export class IPv6Validator {
         throw Error("Not implemented");
     }
     static contract(input: string): string {
-        throw Error("Not implemented");
+        return input;
     }    
 }
