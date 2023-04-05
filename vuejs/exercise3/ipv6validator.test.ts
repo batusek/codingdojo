@@ -70,3 +70,8 @@ test("from two groups of zeros, only the longest one is contracted to double col
     let input = "123f:0000:0000:123f:0000:0000:0000:123f"
     expect(new IPv6Address(input).contract()).toEqual("123f:0:0:123f::123f");
 });
+
+test("from two equally-long groups of zeros, only one is contracted to double colon", () => {
+    let input = "123f:0000:0000:123f:123f:0000:0000:123f"
+    expect(new IPv6Address(input).contract()).toEqual("123f::123f:123f:0:0:123f");
+});
