@@ -13,12 +13,21 @@ export class IPv6Address {
        return /^0+$/.test(component) 
     }
 
+    private contractComponent(component:string): string {
+        if (this.isZero(component))
+            return "0"
+
+        if (component.startsWith("0"))
+            return this.contractComponent(component.substring(1))
+
+        return component
+    }
+
     contract(): string {
         var components = this.address.split(":")
 
         for(let i=0; i<components.length; i++)
-            if (this.isZero(components[i]))
-                components[i] = "0"
+            components[i] = this.contractComponent(components[i])
         return components.join(":");
     }
 }

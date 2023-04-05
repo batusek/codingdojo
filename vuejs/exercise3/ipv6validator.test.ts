@@ -20,3 +20,8 @@ test("a group of three zeros should be contracted to one zero", () => {
     let input = "123f:123f:123f:123f:123f:123f:000:123f"
     expect(new IPv6Address(input).contract()).toEqual("123f:123f:123f:123f:123f:123f:0:123f");
 });
+
+test("leading zeros are removed", () => {
+    let input = "123f:123f:123f:123f:123f:123f:023f:123f"
+    expect(new IPv6Address(input).contract()).toEqual("123f:123f:123f:123f:123f:123f:23f:123f");
+});
