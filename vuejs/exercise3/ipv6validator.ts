@@ -25,6 +25,7 @@ export class IPv6Address {
 
     contractZeros(output: string): string {
         var result = output;
+        result = result.replace("0:0:0:0:0:0:0","")
         result = result.replace("0:0:0:0:0:0","")
         result = result.replace("0:0:0:0:0","")
         result = result.replace("0:0:0:0","")
@@ -33,7 +34,7 @@ export class IPv6Address {
 
         if (/^[0-9a-f]:$/.test(result.slice(-2)))
             result = result + ":"
-            
+
         if (/^:[0-9a-f]$/.test(result.slice(0,2)))
             result = ":" + result
         return result;
