@@ -23,7 +23,7 @@ export class IPv6Address {
         return component.toLowerCase();
     }
 
-    contractZeros(output: string): string {
+    private contractZeros(output: string): string {
         var result = output;
         result = result.replace("0:0:0:0:0:0:0:0","::")
         result = result.replace("0:0:0:0:0:0:0","")
