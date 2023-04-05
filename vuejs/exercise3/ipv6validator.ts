@@ -20,6 +20,23 @@ export class IPv6Address {
        return /^0+$/.test(component) 
     }
 
+    private expandComponents(components: string[]): string[] {
+        if (components.length==8)
+            return components
+
+        var expanded: string[] = [];
+        if (components.length<8)
+            for (var i=0; i<components.length; i++)
+                if (components[i]!='')
+                    expanded.push(components[i])
+                else
+                    for(var j=0; j<8-components.length; j++)
+                        expanded.push("0")
+
+        return expanded
+
+    }
+
     private contractComponent(component:string): string {
         component = component.toLowerCase();
         if (!/^[0-9a-f]+$/.test(component))
@@ -79,6 +96,8 @@ export class IPv6Address {
         try {
             if (components.length>8)
                 throw new IPv6ParsingError("Too many groups")
+            
+            components = this.expandComponents(components);
 
             for(let i=0; i<components.length; i++)
                 components[i] = this.contractComponent(components[i])   

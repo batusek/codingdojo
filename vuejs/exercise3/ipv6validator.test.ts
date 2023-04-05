@@ -87,6 +87,6 @@ test("too many groups", () => {
 });
 
 test("one double colon is correct", () => {
-    let input = "123f::123f:123f:123f::123f"
-    expect(new IPv6Address(input).contract()).toEqual("123f::123f:123f:123f::123f");;
+    let input = "123f:123f:123f:123f::123f"
+    expect(new IPv6Address(input).contract()).toEqual("123f:123f:123f:123f::123f");;
 });
