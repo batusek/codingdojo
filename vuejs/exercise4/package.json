@@ -4,13 +4,14 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "vitest run"
+    "test": "DEBUG=* vitest run"
   },
   "devDependencies": {
     "debug": "^4.3.4",
     "jest-fetch-mock": "^3.0.3",
     "node-fetch": "^3.3.1",
     "vite": "latest",
-    "vitest": "latest"
+    "vitest": "latest",
+    "vitest-fetch-mock": "^0.2.2"
   }
 }
