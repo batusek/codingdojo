@@ -10,6 +10,7 @@ export class PokemonPedia2 {
 
         const data_type = await fetch(pokemon.types[0].type.url);
         var type = await data_type.json()
+        console.log(type)
 
         const data_species = await fetch(pokemon.species.url);
         var species = await data_species.json()
