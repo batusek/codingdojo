@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 export class PokemonPedia {
-    async investigate(name) {
+    async investigate(name: string) {
         // See https://pokeapi.co/docs/v2 for API description
         const data_pokemon = await fetch('https://pokeapi.co/api/v2/pokemon/' + name + '/')
         var pokemon = await data_pokemon.json();

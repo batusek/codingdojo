@@ -2,8 +2,8 @@ import { expect, test } from 'vitest'
 import { PokemonPedia } from "./pokemon";
 
 test("integration test", async () => {
-    var pedia = new PokemonPedia(); 
-    var data = await pedia.investigate("pikachu")
+    var pokemonPedia = new PokemonPedia(); 
+    var data = await pokemonPedia.investigate("pikachu")
 
     expect(data.name).toEqual("pikachu");
     expect(data.damage_class).toEqual("special");

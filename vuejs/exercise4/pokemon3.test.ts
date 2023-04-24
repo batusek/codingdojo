@@ -25,25 +25,25 @@ class TestablePokemonPedia extends PokemonPedia {
 }
 
 test("testing with inheritance", async () => {
-    var pedia = new TestablePokemonPedia(); 
-    pedia.registerUri("pokemon", JSON.stringify(
+    var pokemonPedia = new TestablePokemonPedia(); 
+    pokemonPedia.registerUri("pokemon", JSON.stringify(
         {
             "name": "raichu", 
             "species": { "url": "species_url" },
             "types": [{ "type": { "url": "type_url"}}]
         }));
 
-    pedia.registerUri("type", JSON.stringify(
+    pokemonPedia.registerUri("type", JSON.stringify(
         { "move_damage_class": { "name": "special" } }
     ));
     
-    pedia.registerUri("species", JSON.stringify(
+    pokemonPedia.registerUri("species", JSON.stringify(
         { 
             "is_legendary": false, 
             "growth_rate": { "name": "high" } 
         }
     ));
-    var data = await pedia.investigate("pikachu")
+    var data = await pokemonPedia.investigate("pikachu")
 
     expect(data.name).toEqual("raichu");
     expect(data.damage_class).toEqual("special");

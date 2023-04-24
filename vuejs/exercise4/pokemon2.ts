@@ -1,6 +1,6 @@
 // For testing with mocks, no change in the production code is needed
-export class PokemonPedia2 {
-    async investigate(name) {
+export class PokemonPedia {
+    async investigate(name: string) {
         // See https://pokeapi.co/docs/v2 for API description
         const data_pokemon = await fetch('https://pokeapi.co/api/v2/pokemon/' + name + '/')
         var pokemon = await data_pokemon.json();

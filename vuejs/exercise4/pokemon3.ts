@@ -1,5 +1,5 @@
 export class PokemonPedia {
-    async investigate(name) {
+    async investigate(name: string) {
         // See https://pokeapi.co/docs/v2 for API description
         const data_pokemon = await this.fetchUrl('https://pokeapi.co/api/v2/pokemon/' + name + '/')
         var pokemon = await data_pokemon.json();
@@ -20,7 +20,7 @@ export class PokemonPedia {
         return result;
     }
 
-    protected async fetchUrl(url) {
+    protected async fetchUrl(url: string) {
         return fetch(url);
     }
 }

@@ -1,6 +1,6 @@
 import createFetchMock from 'vitest-fetch-mock';
 import { expect, test, vi } from 'vitest';
-import { PokemonPedia2 } from "./pokemon2";
+import { PokemonPedia } from "./pokemon2";
 
 const fetchMocker = createFetchMock(vi);
 fetchMocker.enableMocks();
@@ -24,7 +24,7 @@ test("test with mocks", async () => {
         }
     );
 
-    var pedia = new PokemonPedia2(); 
+    var pokemonPedia = new PokemonPedia(); 
     fetch.mockResponse((req) =>
           req.url.includes("pokemon") ? 
           Promise.resolve(pokemon_response)
@@ -35,7 +35,7 @@ test("test with mocks", async () => {
           : Promise.reject(new Error('bad url'))
     );
 
-    var data = await pedia.investigate("pikachu");
+    var data = await pokemonPedia.investigate("pikachu");
     
     expect(data.name).toEqual("raichu");
     expect(data.damage_class).toEqual("special");
