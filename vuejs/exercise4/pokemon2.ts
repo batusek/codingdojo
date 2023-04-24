@@ -1,16 +1,12 @@
-// import fetch from 'node-fetch'
-
 // For testing with mocks, no change in the production code is needed
 export class PokemonPedia2 {
     async investigate(name) {
         // See https://pokeapi.co/docs/v2 for API description
         const data_pokemon = await fetch('https://pokeapi.co/api/v2/pokemon/' + name + '/')
         var pokemon = await data_pokemon.json();
-        console.log(pokemon)
 
         const data_type = await fetch(pokemon.types[0].type.url);
         var type = await data_type.json()
-        console.log(type)
 
         const data_species = await fetch(pokemon.species.url);
         var species = await data_species.json()

@@ -1,16 +1,9 @@
 import createFetchMock from 'vitest-fetch-mock';
-import { vi } from 'vitest';
+import { expect, test, vi } from 'vitest';
+import { PokemonPedia2 } from "./pokemon2";
 
 const fetchMocker = createFetchMock(vi);
 fetchMocker.enableMocks();
-
-import { expect, test } from 'vitest';
-import { PokemonPedia2 } from "./pokemon2";
-
-
-function createFetchResponse(data) {
-    return { json: () => new Promise((resolve) => resolve(data)) }
-  }
 
 test("test with mocks", async () => {
     var pokemon_response = JSON.stringify(
@@ -31,8 +24,6 @@ test("test with mocks", async () => {
         }
     );
 
-    // fetch.mockResponse(pokemon_response);
-
     var pedia = new PokemonPedia2(); 
     fetch.mockResponse((req) =>
           req.url.includes("pokemon") ? 
@@ -45,12 +36,6 @@ test("test with mocks", async () => {
     );
 
     var data = await pedia.investigate("pikachu");
-
-    // var data = fetchMocker.mockResponseOnce(
-    //     () => pedia.investigate("pikachu")
-    //         .then((res) => ({"name": "raichu"}))
-    // );
-    console.log(data);
     
     expect(data.name).toEqual("raichu");
     expect(data.damage_class).toEqual("special");
