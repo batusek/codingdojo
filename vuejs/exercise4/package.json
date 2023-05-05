@@ -1,0 +1,17 @@
+{
+  "name": "@tddtraining/exercise4",
+  "type": "module",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=* vitest run",
+    "watch": "vitest watch"
+  },
+  "devDependencies": {
+    "debug": "^4.3.4",
+    "node-fetch": "^3.3.1",
+    "vite": "latest",
+    "vitest": "latest",
+    "vitest-fetch-mock": "^0.2.2"
+  }
+}
