@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "vite": "latest",
-    "vitest": "^0.31.0"
+    "vitest": "latest"
   }
 }

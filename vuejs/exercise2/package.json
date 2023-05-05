@@ -1,5 +1,5 @@
 {
-  "name": "@tddtraining/exercise1",
+  "name": "@tddtraining/exercise2",
   "type": "module",
   "private": true,
   "main": "index.js",
@@ -8,7 +8,7 @@
     "watch": "vitest watch"
   },
   "devDependencies": {
-    "vite": "^4.3.5",
-    "vitest": "^0.31.0"
+    "vite": "latest",
+    "vitest": "latest"
   }
 }

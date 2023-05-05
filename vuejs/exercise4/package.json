@@ -8,10 +8,10 @@
     "watch": "vitest watch"
   },
   "devDependencies": {
-    "debug": "^4.3.4",
-    "node-fetch": "^3.3.1",
+    "debug": "latest",
+    "node-fetch": "latest",
     "vite": "latest",
     "vitest": "latest",
-    "vitest-fetch-mock": "^0.2.2"
+    "vitest-fetch-mock": "latest"
   }
 }
