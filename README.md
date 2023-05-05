@@ -1,5 +1,7 @@
 # Test-driven development training
 
+This repository is an add on to the one day [Test-Driven Development training](https://batusek.cz/en/domu-cestina/trainings/test-driven-development/)
+
 # Instructions
 
 ## Prerequisites
@@ -24,8 +26,8 @@ The only existing test in `exercise1/leapyeartest.py` should fail
 The only existing test in `exercise1/LeapYearTest.cs` should fail
 
 ### vuejs
-- Type "npm run test" in terminal
-The only existing test in `exercise1/LeapYearTest.vue` should fail
+- Type "npm test" in terminal. Alternatively, press Ctrl+F5 to start watching changes.
+The only existing test in `exercise1/leapyear.test.ts` should fail
 
 
 # Exercises
@@ -46,13 +48,18 @@ Start from scratch and grow your code with Red-Green-Refactor cycles. This exerc
 
 Instructions: [IPv6 address validator](https://www.codewars.com/kata/54fa4e210609868fce0002bf)
 
+## Exercise 4 - Getting rid of dependencies
+An existing code that calls some infrastructure code inside is available including an integration test. Rewrite the code 3 times using various techniques for getting rid of dependencies and using tiny and safe refactorings before you write more focused tests. The three methods:
+- Use mocks/stubs
+- Use a virtual method and subclassing
+- Make dependency explicit
+
+
 # TODO
 ## Exercise X - Refactor and existing class/method
 E.g. http://codingdojo.org/kata/GildedRose/
 
-## Exercise X Testing asynchronous functions
 
-
-## Exercise X Get rid of dependency
+## Exercise X Get rid of dependency alternative
 E.g. https://github.com/sandromancuso/trip-service-kata or HTML formatter
 
