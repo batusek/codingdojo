@@ -8,7 +8,7 @@
             "name": "Run tests",
             "type": "node",
             "request": "launch",
-            "cwd": "${workspaceFolder}/exercise1",
+            "cwd": "${fileDirname}",
             "runtimeExecutable": "npm",
             "runtimeArgs": ["run", "watch"],
             "console": "integratedTerminal"
