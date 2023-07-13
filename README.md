@@ -22,10 +22,13 @@ This repository is an add on to the one day [Test-Driven Development training](h
 The only existing test in `exercise1/leapyeartest.py` should fail
 
 ### .Net
+- `cd exercise1`
 - Type "dotnet test" in terminal
 The only existing test in `exercise1/LeapYearTest.cs` should fail
 
 ### vuejs
+- `cd exercise1`
+- Type "npm install" in terminal.
 - Type "npm test" in terminal. Alternatively, press Ctrl+F5 to start watching changes.
 The only existing test in `exercise1/leapyear.test.ts` should fail
 
