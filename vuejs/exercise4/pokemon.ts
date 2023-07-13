@@ -1,4 +1,3 @@
-import fetch from 'node-fetch'
 
 export class PokemonPedia {
     async investigate(name: string) {

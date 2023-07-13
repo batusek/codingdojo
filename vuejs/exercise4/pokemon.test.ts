@@ -1,5 +1,8 @@
+import fetch from 'node-fetch'
 import { expect, test } from 'vitest'
 import { PokemonPedia } from "./pokemon";
+
+globalThis.fetch = fetch; // we use a default browser fetch for fetching
 
 test("integration test", async () => {
     var pokemonPedia = new PokemonPedia(); 
