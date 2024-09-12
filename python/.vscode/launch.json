@@ -6,10 +6,25 @@
     "configurations": [
         {
             "name": "Python: Current File",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
-        }
+        },
+        {
+            "name": "Leap year tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/tooling/leapyeartest.py",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Global state tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/global_state/globalstatetest.py",
+            "cwd": "${workspaceFolder}/global_state",
+            "console": "integratedTerminal"
+        },        
     ]
 }
