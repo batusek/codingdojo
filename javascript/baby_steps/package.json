@@ -1,0 +1,14 @@
+{
+  "name": "@tddtraining/exercise2",
+  "type": "module",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "watch": "vitest watch"
+  },
+  "devDependencies": {
+    "vite": "latest",
+    "vitest": "latest"
+  }
+}
