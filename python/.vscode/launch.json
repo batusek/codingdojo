@@ -26,5 +26,14 @@
             "cwd": "${workspaceFolder}/global_state",
             "console": "integratedTerminal"
         },        
+        {
+            "name": "Refactoring alphabet tests",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","refactoring_alphabet"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
     ]
 }
