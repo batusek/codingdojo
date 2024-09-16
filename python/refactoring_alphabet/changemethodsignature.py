@@ -11,6 +11,7 @@ class CoordinateHelper:
     def distance_from_beginning(x: float, y: float) -> float:
         return sqrt(x*x + y*y)
 
+
 @dataclass
 class Point:
     x: float
