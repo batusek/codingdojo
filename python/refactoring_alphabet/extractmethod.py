@@ -23,8 +23,8 @@ class PriceCalculator:
         return total    
     
 #After
-class PriceCalculator2:
-    def __init(self, taxRate: float):
+class PriceCalculatorA:
+    def __init__(self, taxRate: float):
         self.taxRate = taxRate
     
     def calculate_total_price(self, items: list[Item]):
