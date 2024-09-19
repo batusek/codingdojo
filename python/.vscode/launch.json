@@ -43,5 +43,13 @@
             "cwd": "${workspaceFolder}/",
             "console": "integratedTerminal"
         },        
-    ]
+        {
+            "name": "Side effect tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/side_effect/test_invoiceitemmanager.py",
+            "cwd": "${workspaceFolder}/side_effect",
+            "console": "integratedTerminal"
+        },        
+   ]
 }
