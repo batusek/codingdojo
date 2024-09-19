@@ -19,6 +19,14 @@
             "console": "integratedTerminal"
         },        
         {
+            "name": "Legacy intro tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/legacy_intro/test_legacyintro.py",
+            "cwd": "${workspaceFolder}/legacy_intro",
+            "console": "integratedTerminal"
+        },        
+        {
             "name": "Global state tests",
             "type": "debugpy",
             "request": "launch",
