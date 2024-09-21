@@ -60,5 +60,14 @@
             "cwd": "${workspaceFolder}/",
             "console": "integratedTerminal"
         },        
+        {
+            "name": "Blob tests",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","blob"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
    ]
 }
