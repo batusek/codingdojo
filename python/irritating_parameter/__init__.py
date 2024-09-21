@@ -1,1 +1,1 @@
-from .fioconnector import FioConnector
+from .bankconnector import BankConnector
