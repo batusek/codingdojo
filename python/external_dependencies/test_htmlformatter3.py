@@ -7,6 +7,9 @@ class TestableHtmlFormatter(HtmlFormatter):
     def __init__(self):
         self.text = ""
 
+    def openFile(self):
+        pass
+    
     def writeToFile(self,f,text):
         self.text += text
 
@@ -38,8 +41,8 @@ class HtmlFormatterTest(unittest.TestCase):
         ]
         HtmlFormatter().printReport(data)
 
-        f = open("output.html","r")
-        actual = f.read()
+        with open("output.html","r") as f:
+            actual = f.read()
         self.assertEqual(actual,self.expected)
 
     # test using a testable subclass
@@ -53,5 +56,3 @@ class HtmlFormatterTest(unittest.TestCase):
         formatter.printReport(data)
         self.assertEqual(formatter.text,self.expected)
 
-if __name__ == '__main__':
-    unittest.main()

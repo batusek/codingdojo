@@ -1,6 +1,6 @@
 class HtmlFormatter:
     def printReport(self, data :list):
-        f = open("output.html","w")
+        f = self.openFile()
 
         self.writeToFile(f, "<html><body>\n")
         self.writeToFile(f, '<table border="1">\n')
@@ -15,6 +15,10 @@ class HtmlFormatter:
         self.writeToFile(f, "</tr></table>\n")
         self.writeToFile(f, "</body></html>\n")
         self.closeFile(f)
+
+    def openFile(self):
+        f = open("output.html","w")
+        return f
 
     def writeToFile(self, f, text):
         f.write(text)

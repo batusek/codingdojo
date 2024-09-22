@@ -53,6 +53,3 @@ class HtmlFormatterTest(unittest.TestCase):
         HtmlFormatter().printReport(data,file)
         self.assertEqual(file.text,self.expected)
 
-
-if __name__ == '__main__':
-    unittest.main()

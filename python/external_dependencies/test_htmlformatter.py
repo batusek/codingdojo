@@ -32,6 +32,3 @@ class HtmlFormatterTest(unittest.TestCase):
         actual = f.read()
         self.assertEqual(actual,self.expected)
 
-
-if __name__ == '__main__':
-    unittest.main()

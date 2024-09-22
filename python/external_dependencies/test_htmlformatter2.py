@@ -57,6 +57,3 @@ class HtmlFormatterTest(unittest.TestCase):
         mock_file.write.assert_has_calls(calls)
         mock_file.close.assert_called()
 
-
-if __name__ == '__main__':
-    unittest.main()
