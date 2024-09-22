@@ -31,7 +31,7 @@ class HtmlFormatterTest(unittest.TestCase):
 
         f = open("output.html","r")
         actual = f.read()
-        self.assertEquals(actual,self.expected)
+        self.assertEqual(actual,self.expected)
 
     # test using mocks
     @patch('htmlformatter2.open')

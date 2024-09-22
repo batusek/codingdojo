@@ -30,7 +30,7 @@ class HtmlFormatterTest(unittest.TestCase):
 
         f = open("output.html","r")
         actual = f.read()
-        self.assertEquals(actual,self.expected)
+        self.assertEqual(actual,self.expected)
 
 
 if __name__ == '__main__':

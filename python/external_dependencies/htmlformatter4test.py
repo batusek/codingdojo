@@ -40,7 +40,7 @@ class HtmlFormatterTest(unittest.TestCase):
 
         f = open("output.html","r")
         actual = f.read()
-        self.assertEquals(actual,self.expected)
+        self.assertEqual(actual,self.expected)
 
     # test with dependency injection
     def test_outputs_are_identical(self):
@@ -51,7 +51,7 @@ class HtmlFormatterTest(unittest.TestCase):
         ]
         file = StubFile()
         HtmlFormatter().printReport(data,file)
-        self.assertEquals(file.text,self.expected)
+        self.assertEqual(file.text,self.expected)
 
 
 if __name__ == '__main__':

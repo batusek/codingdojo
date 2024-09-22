@@ -40,7 +40,7 @@ class HtmlFormatterTest(unittest.TestCase):
 
         f = open("output.html","r")
         actual = f.read()
-        self.assertEquals(actual,self.expected)
+        self.assertEqual(actual,self.expected)
 
     # test using a testable subclass
     def test_outputs_are_identical(self):
@@ -51,7 +51,7 @@ class HtmlFormatterTest(unittest.TestCase):
         ]
         formatter = TestableHtmlFormatter()
         formatter.printReport(data)
-        self.assertEquals(formatter.text,self.expected)
+        self.assertEqual(formatter.text,self.expected)
 
 if __name__ == '__main__':
     unittest.main()

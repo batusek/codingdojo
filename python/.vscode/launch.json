@@ -19,6 +19,15 @@
             "console": "integratedTerminal"
         },        
         {
+            "name": "External dependencies tests",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","external_dependencies"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
             "name": "Legacy intro tests",
             "type": "debugpy",
             "request": "launch",
