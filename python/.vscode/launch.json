@@ -5,13 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
             "name": "Leap year tests",
             "type": "debugpy",
             "request": "launch",
@@ -23,6 +16,15 @@
             "type": "debugpy",
             "request": "launch",
             "args": ["discover","baby_steps"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Blob",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","blob"],
             "module": "unittest",
             "cwd": "${workspaceFolder}/",
             "console": "integratedTerminal"
@@ -79,13 +81,11 @@
             "console": "integratedTerminal"
         },        
         {
-            "name": "Blob tests",
+            "name": "Python: Current File",
             "type": "debugpy",
             "request": "launch",
-            "args": ["discover","blob"],
-            "module": "unittest",
-            "cwd": "${workspaceFolder}/",
+            "program": "${file}",
             "console": "integratedTerminal"
-        },        
+        },
    ]
 }
