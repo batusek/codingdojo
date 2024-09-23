@@ -48,6 +48,15 @@
             "console": "integratedTerminal"
         },        
         {
+            "name": "Grow my code",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","grow_my_code"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
             "name": "Legacy intro tests",
             "type": "debugpy",
             "request": "launch",
