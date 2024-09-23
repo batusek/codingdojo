@@ -1,5 +1,5 @@
 import unittest
-from ipv6validator import *
+from grow_my_code.ipv6validator import *
 
 #Based on https://www.codewars.com/kata/54fa4e210609868fce0002bf
 class IPv6ValidatorTest(unittest.TestCase):

@@ -95,6 +95,15 @@
             "console": "integratedTerminal"
         },        
         {
+            "name": "Run all tests",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","-v"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
             "name": "Python: Current File",
             "type": "debugpy",
             "request": "launch",

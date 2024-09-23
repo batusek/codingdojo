@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import *
 import os
-from htmlformatter import *
+from external_dependencies.htmlformatter import *
 
 class HtmlFormatterTest(unittest.TestCase):
     def setUp(self):

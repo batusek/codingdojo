@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import *
 import os
-from htmlformatter3 import *
+from external_dependencies.htmlformatter3 import *
 
 class TestableHtmlFormatter(HtmlFormatter):
     def __init__(self):

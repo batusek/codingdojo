@@ -1,8 +1,8 @@
 import os
 import unittest
 
-from legacyintro import InvoiceItemManager
-from legacyintro import InvoiceItemManagerA
+from legacy_intro.legacyintro import InvoiceItemManager
+from legacy_intro.legacyintro import InvoiceItemManagerA
 
 class InvoiceItemManagerTest(unittest.TestCase):
     def setUp(self):

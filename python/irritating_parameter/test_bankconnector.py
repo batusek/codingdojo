@@ -37,5 +37,3 @@ class BankConnectorTest(unittest.TestCase):
         self.assertEqual(response, "Token A sample token")
     # After end
         
-if __name__ == '__main__':
-    unittest.main()        

@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import *
 import os
-from htmlformatter2 import *
+from external_dependencies.htmlformatter2 import *
 
 
 class HtmlFormatterTest(unittest.TestCase):
@@ -29,12 +29,12 @@ class HtmlFormatterTest(unittest.TestCase):
         ]
         HtmlFormatter().printReport(data)
 
-        f = open("output.html","r")
-        actual = f.read()
+        with open("output.html","r") as f:
+            actual = f.read()
         self.assertEqual(actual,self.expected)
 
     # test using mocks
-    @patch('htmlformatter2.open')
+    @patch('external_dependencies.htmlformatter2.open')
     def test_writes_to_file(self, patch_open):
         data = [
             { "username": "admin", "date": "2020-02-20"}

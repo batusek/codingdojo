@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import *
 import os
-from htmlformatter4 import *
+from external_dependencies.htmlformatter4 import *
 
 class StubFile:
     def __init__(self):

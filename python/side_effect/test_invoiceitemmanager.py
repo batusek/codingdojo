@@ -1,8 +1,8 @@
 import os
 import unittest
 
-from invoiceitemmanager import InvoiceItemManager
-from invoiceitemmanager import InvoiceItemManagerA
+from side_effect.invoiceitemmanager import InvoiceItemManager
+from side_effect.invoiceitemmanager import InvoiceItemManagerA
 
 class TestInvoiceItemManager(InvoiceItemManagerA):
     def __init__(self):
@@ -18,5 +18,3 @@ class InvoiceItemManagerTest(unittest.TestCase):
         total = manager.output.split(";")[-1]
         self.assertAlmostEqual(float(total),3.6,2)
         
-if __name__ == '__main__':
-    unittest.main()        

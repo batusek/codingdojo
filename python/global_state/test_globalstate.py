@@ -1,6 +1,6 @@
 from configparser import ConfigParser
 import unittest
-from globalstate import Configuration
+from global_state.globalstate import Configuration
 
 
 class TestableConfiguration(Configuration):

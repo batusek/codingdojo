@@ -1,5 +1,5 @@
 import unittest
-from leapyear import isLeapYear
+from tooling.leapyear import isLeapYear
 
 
 class LeapYearTest(unittest.TestCase):
@@ -14,6 +14,3 @@ class LeapYearTest(unittest.TestCase):
 
     def test_every_400_years_there_is_a_leap_year(self):
         self.assertTrue(isLeapYear(1600))
-
-if __name__ == '__main__':
-    unittest.main()
