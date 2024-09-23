@@ -19,6 +19,15 @@
             "console": "integratedTerminal"
         },        
         {
+            "name": "Baby steps",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","baby_steps"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
             "name": "External dependencies tests",
             "type": "debugpy",
             "request": "launch",
