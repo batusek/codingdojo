@@ -5,13 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Leap year tests",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/tooling/leapyeartest.py",
-            "console": "integratedTerminal"
-        },        
-        {
             "name": "Baby steps",
             "type": "debugpy",
             "request": "launch",
@@ -75,7 +68,7 @@
             "console": "integratedTerminal"
         },        
         {
-            "name": "Refactoring alphabet tests",
+            "name": "Refactoring alphabet",
             "type": "debugpy",
             "request": "launch",
             "args": ["discover","refactoring_alphabet"],
@@ -84,11 +77,19 @@
             "console": "integratedTerminal"
         },        
         {
-            "name": "Side effect tests",
+            "name": "Side effect",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/side_effect/test_invoiceitemmanager.py",
-            "cwd": "${workspaceFolder}/side_effect",
+            "args": ["discover","side_effect"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Leap year tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/tooling/leapyeartest.py",
             "console": "integratedTerminal"
         },        
         {
