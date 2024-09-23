@@ -30,10 +30,19 @@
             "console": "integratedTerminal"
         },        
         {
-            "name": "External dependencies tests",
+            "name": "External dependencies",
             "type": "debugpy",
             "request": "launch",
             "args": ["discover","external_dependencies"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Global state",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","global_state"],
             "module": "unittest",
             "cwd": "${workspaceFolder}/",
             "console": "integratedTerminal"
@@ -44,14 +53,6 @@
             "request": "launch",
             "program": "${workspaceFolder}/legacy_intro/test_legacyintro.py",
             "cwd": "${workspaceFolder}/legacy_intro",
-            "console": "integratedTerminal"
-        },        
-        {
-            "name": "Global state tests",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/global_state/globalstatetest.py",
-            "cwd": "${workspaceFolder}/global_state",
             "console": "integratedTerminal"
         },        
         {
