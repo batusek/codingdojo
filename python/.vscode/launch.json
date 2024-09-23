@@ -86,10 +86,12 @@
             "console": "integratedTerminal"
         },        
         {
-            "name": "Leap year tests",
+            "name": "Tooling setup",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/tooling/leapyeartest.py",
+            "args": ["discover","tooling"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
             "console": "integratedTerminal"
         },        
         {
