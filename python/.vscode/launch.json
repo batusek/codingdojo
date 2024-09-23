@@ -57,6 +57,15 @@
             "console": "integratedTerminal"
         },        
         {
+            "name": "Irritating parameter",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","irritating_parameter"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
             "name": "Legacy intro tests",
             "type": "debugpy",
             "request": "launch",
@@ -79,15 +88,6 @@
             "request": "launch",
             "program": "${workspaceFolder}/side_effect/test_invoiceitemmanager.py",
             "cwd": "${workspaceFolder}/side_effect",
-            "console": "integratedTerminal"
-        },        
-        {
-            "name": "Irritating parameter tests",
-            "type": "debugpy",
-            "request": "launch",
-            "args": ["discover","irritating_parameter"],
-            "module": "unittest",
-            "cwd": "${workspaceFolder}/",
             "console": "integratedTerminal"
         },        
         {

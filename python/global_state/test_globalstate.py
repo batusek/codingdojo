@@ -29,6 +29,3 @@ class ConfigurationTest(unittest.TestCase):
         Configuration.set_instance(configuration)
         self.assertEqual(Configuration.get_value("DB_USER"),"internalUser")
 
-
-if __name__ == '__main__':
-    unittest.main()
