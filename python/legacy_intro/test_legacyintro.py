@@ -7,7 +7,10 @@ from legacyintro import InvoiceItemManagerA
 class InvoiceItemManagerTest(unittest.TestCase):
     def setUp(self):
         super().setUp()
-        os.remove("invoice_items.csv")
+        try:
+            os.remove("invoice_items.csv")
+        except FileNotFoundError:
+            pass
         
     def test_invoice_item_amount_calculated_correctly(self):
         manager = InvoiceItemManager()
@@ -23,6 +26,3 @@ class InvoiceItemManagerATest(unittest.TestCase):
         manager = InvoiceItemManagerA()
         self.assertAlmostEqual(manager.calculate_total(1,3,0.2),3.6,2)
         
-        
-if __name__ == '__main__':
-    unittest.main()        

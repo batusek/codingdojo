@@ -66,11 +66,12 @@
             "console": "integratedTerminal"
         },        
         {
-            "name": "Legacy intro tests",
+            "name": "Legacy intro",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/legacy_intro/test_legacyintro.py",
-            "cwd": "${workspaceFolder}/legacy_intro",
+            "args": ["discover","legacy_intro"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
             "console": "integratedTerminal"
         },        
         {
