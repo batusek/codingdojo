@@ -1,10 +1,9 @@
 import os
 import unittest
 
-from side_effect.invoiceitemmanager import InvoiceItemManager
-from side_effect.invoiceitemmanager import InvoiceItemManagerA
+from side_effect.invoiceitemmanager import *
 
-class TestInvoiceItemManager(InvoiceItemManagerA):
+class TestableInvoiceItemManager(InvoiceItemManagerA):
     def __init__(self):
         output = ""
         
@@ -13,7 +12,7 @@ class TestInvoiceItemManager(InvoiceItemManagerA):
 
 class InvoiceItemManagerTest(unittest.TestCase):
     def test_calculation(self):
-        manager = TestInvoiceItemManager()
+        manager = TestableInvoiceItemManager()
         manager.save_item_total_amount(1,3,0.2)
         total = manager.output.split(";")[-1]
         self.assertAlmostEqual(float(total),3.6,2)
