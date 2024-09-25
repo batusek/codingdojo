@@ -30,6 +30,16 @@
             "runtimeArgs": ["test","--", "grow_my_code"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
+          },
+          {
+            "name": "External dependencies",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "external_dependencies"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
           }
      ]
 }
