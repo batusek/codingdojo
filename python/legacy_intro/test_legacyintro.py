@@ -1,8 +1,7 @@
 import os
 import unittest
 
-from legacy_intro.legacyintro import InvoiceItemManager
-from legacy_intro.legacyintro import InvoiceItemManagerA
+from legacy_intro.legacyintro import *
 
 class InvoiceItemManagerTest(unittest.TestCase):
     def setUp(self):
@@ -21,8 +20,9 @@ class InvoiceItemManagerTest(unittest.TestCase):
         total = float(text.split(";")[-1])
         self.assertAlmostEqual(total,3.6,2)
 
+# After start
 class InvoiceItemManagerATest(unittest.TestCase):
     def test_invoice_item_amount_calculated_correctly(self):
-        manager = InvoiceItemManagerA()
+        manager = InvoiceItemManagerRefactored()
         self.assertAlmostEqual(manager.calculate_total(1,3,0.2),3.6,2)
-        
+# After end      
