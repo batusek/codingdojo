@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+          {
+            "name": "Tooling",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test"],
+            "cwd": "${workspaceFolder}/tooling",
+            "console": "integratedTerminal"
+          }
+    ]
+}
