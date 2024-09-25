@@ -1,7 +1,10 @@
 import unittest
-from unittest.mock import *
 import os
 from external_dependencies.htmlformatter import *
+
+# After start
+from unittest.mock import *
+# After end
 
 class HtmlFormatterTest(unittest.TestCase):
     def setUp(self):
@@ -19,8 +22,9 @@ class HtmlFormatterTest(unittest.TestCase):
 </body></html>
 """
 
-    # test using a blackbox test that accesses filesystem
     def test_files_are_identical(self):
+        """ test using a blackbox test that accesses filesystem  """
+        # After start
         data = [
             { "username": "admin", "date": "2020-02-20"},
             { "username": "guest", "date": "2020-02-29"},
@@ -31,4 +35,36 @@ class HtmlFormatterTest(unittest.TestCase):
         f = open("output.html","r")
         actual = f.read()
         self.assertEqual(actual,self.expected)
+        # After end
 
+class HtmlFormatterTestWithMocks(unittest.TestCase):
+    # After start
+    @patch('external_dependencies.htmlformatter.open')
+    # After end
+    def test_writes_to_file(self, patch_open):
+        """test using mocks"""
+        # After start
+        data = [
+            { "username": "admin", "date": "2020-02-20"}
+        ]
+
+        mock_file = Mock()
+        patch_open.return_value = mock_file
+        HtmlFormatter().printReport(data)
+        calls = [ 
+            call("<html><body>\n"), 
+            call('<table border="1">\n'), 
+            call("<tr><th>Username</th><th>Last login</th></tr>"),
+            call("<tr>\n"),
+            call('<td>admin</td>'),
+            call('<td>2020-02-20</td>'),
+            call("</tr>\n"),
+            call("</tr></table>\n"),
+            call("</body></html>\n")
+            ]
+        mock_file.write.assert_has_calls(calls)
+        mock_file.close.assert_called()
+        # After end
+
+# After start
+# After end
