@@ -9,5 +9,6 @@ def isLeapYear(year):
     if year % 4 == 0:
         return True
 
-    # After end
     return False
+    # After end
+    # Uncomment:    return True
