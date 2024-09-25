@@ -36,11 +36,15 @@ def insertLines(filename: str, start: int, excerpt: list[str]):
 
 
 def python():
+    # no adaptation needed for baby steps yet
     # adaptFile("../python/blob/worldbank.py")
     # adaptFile("../python/blob/test_worldbank.py")
     # adaptFile("../python/external_dependencies/test_htmlformatter.py")
-    adaptFile("../python/global_state/globalstate.py")
-    adaptFile("../python/global_state/test_globalstate.py")
+    # adaptFile("../python/global_state/globalstate.py")
+    # adaptFile("../python/global_state/test_globalstate.py")
+    # no adaptation needed for grow my code yet
+    adaptFile("../python/irritating_parameter/bankconnector.py")
+    adaptFile("../python/irritating_parameter/test_bankconnector.py")
 
 
 python()
