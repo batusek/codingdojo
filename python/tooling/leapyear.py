@@ -1,4 +1,5 @@
 def isLeapYear(year):
+    # After start
     if year % 400 == 0:
         return True
 
@@ -9,3 +10,5 @@ def isLeapYear(year):
         return True
 
     return False
+    # After end
+    # Uncomment:    return True
