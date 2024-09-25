@@ -55,8 +55,10 @@ def python():
     # adaptFile("../python/refactoring_alphabet/test_introduceobject.py")
     # adaptFile("../python/refactoring_alphabet/replaceconstructor.py")
     # adaptFile("../python/refactoring_alphabet/test_replaceconstructor.py")
-    adaptFile("../python/side_effect/invoiceitemmanager.py")
-    adaptFile("../python/side_effect/test_invoiceitemmanager.py")
+    # adaptFile("../python/side_effect/invoiceitemmanager.py")
+    # adaptFile("../python/side_effect/test_invoiceitemmanager.py")
+    adaptFile("../python/tooling/leapyear.py")
+    adaptFile("../python/tooling/test_leapyear.py")
 
 
 python()
