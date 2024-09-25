@@ -108,3 +108,44 @@ class HtmlFormatterTestSubclassed(unittest.TestCase):
         formatter.printReport(data)
         self.assertEqual(formatter.text,self.expected)
         # After end
+
+
+# After start
+class StubFile:
+    def __init__(self):
+        self.text = ""
+
+    def write(self,text):
+        self.text += text
+
+    def close(self):
+        pass
+# After end
+
+class HtmlFormatterTestWithDependency(unittest.TestCase):
+    def setUp(self):
+        self.expected = """<html><body>
+<table border="1">
+<tr><th>Username</th><th>Last login</th></tr><tr>
+<td>admin</td><td>2020-02-20</td></tr>
+<tr>
+<td>guest</td><td>2020-02-29</td></tr>
+<tr>
+<td>john</td><td>2020-03-01</td></tr>
+</tr></table>
+</body></html>
+"""
+
+    def test_outputs_are_identical(self):
+        """ test with dependency injection """
+        # After start
+        data = [
+            { "username": "admin", "date": "2020-02-20"},
+            { "username": "guest", "date": "2020-02-29"},
+            { "username": "john", "date": "2020-03-01"}
+        ]
+        file = StubFile()
+        HtmlFormatterWithDependency().printReport(data,file)
+        self.assertEqual(file.text,self.expected)
+        # After end
+

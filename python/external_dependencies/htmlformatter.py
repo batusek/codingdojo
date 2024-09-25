@@ -16,6 +16,7 @@ class HtmlFormatter:
         f.write("</body></html>\n")
         f.close()
 
+# After start
 class HtmlFormatterReadyToSubclass:
     def printReport(self, data :list):
         f = self.openFile()
@@ -44,6 +45,27 @@ class HtmlFormatterReadyToSubclass:
     def closeFile(self, f):
         f.close()
 
+
+class HtmlFormatterWithDependency:
+    def printReport(self, data: list, f = None):
+        if not f:
+            f = open("output.html","w")
+        
+        f.write("<html><body>\n")
+        f.write('<table border="1">\n')
+        f.write("<tr><th>Username</th><th>Last login</th></tr>")
+        for row in data:
+            f.write("<tr>\n")
+            f.write(f'<td>{row["username"]}</td>')
+            f.write(f'<td>{row["date"]}</td>')
+            f.write("</tr>\n")
+
+
+        f.write("</tr></table>\n")
+        f.write("</body></html>\n")
+        f.close()
+
+# After end
 
 
 if __name__ == '__main__':
