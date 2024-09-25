@@ -38,10 +38,11 @@ class HtmlFormatterTest(unittest.TestCase):
         # After end
 
 class HtmlFormatterTestWithMocks(unittest.TestCase):
+    # Uncommment:    def test_writes_to_file(self):
     # After start
     @patch('external_dependencies.htmlformatter.open')
-    # After end
     def test_writes_to_file(self, patch_open):
+    # After end
         """test using mocks"""
         # After start
         data = [
