@@ -27,8 +27,3 @@ class PriceCalculatorTest(unittest.TestCase):
         calculator = self.createCalculator()
         self.assertEqual(calculator.calculate_total_price([item1, item2]),17)
 
-# After start
-class PriceCalculatorAfterTest(PriceCalculatorTest):
-    def createCalculator(self):
-        return PriceCalculatorAfter(0.1)
-# After end

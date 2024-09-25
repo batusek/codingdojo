@@ -19,20 +19,11 @@ class DataProcessor:
         country = "USA"
         
         # create an object based on the previously constructed data
-        # After start
-        self.createFetcher(country)
-
-    def createFetcher(self, country):
-        # After end
         self.fetcher = DataFetcher(country)
         
     def getGdpPerCapita(self) -> float:
         data = self.fetcher.fetchData("NY.GDP.PCAP.KD")
         return data[1][0]['value']
         
-    # After start
-    def setFetcher(self, fetcher: DataFetcher):
-        self.fetcher = fetcher
-        # After end
         
         

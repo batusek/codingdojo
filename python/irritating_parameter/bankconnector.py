@@ -5,23 +5,8 @@ from datetime import datetime
 OAuthTokenType = str
 OAuthToken = "A really complicated OAuth token that requires calling an external API"
 
-# After start
-class TokenProvider(ABC):
-    @abstractmethod
-    def token(self) -> OAuthTokenType:
-        pass
-
-class OAuthTokenProvider(TokenProvider):
-    def token(self) -> OAuthTokenType:
-        return OAuthToken
-# After end
 
 class BankConnector:
-    # After start
-    @classmethod
-    def create(cls, baseUrl: str, provider: TokenProvider):
-        return cls(baseUrl, provider.token)
-    # After end
     
     def __init__(self, baseUrl: str, token: OAuthTokenType):
         self.baseUrl = baseUrl

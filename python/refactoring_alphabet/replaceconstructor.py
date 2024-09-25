@@ -18,15 +18,3 @@ class Exporter:
     def export(self, data: bytes):
         self.storage.write(data)
 
-# After start
-class StorageFactory:
-    def createStorage(self, name:str):
-        return CloudStorage(name)
-        
-class ExporterwithFatoryCall:
-    def __init__(self):
-        self.storage = StorageFactory().createStorage("export.csv")
-        
-    def export(self, data: bytes):
-        self.storage.write(data)
-# After end

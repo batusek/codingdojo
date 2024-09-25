@@ -11,14 +11,3 @@ class CoordinateHelper:
         return sqrt(x*x + y*y)
 
 
-# After start
-@dataclass
-class Point:
-    x: float
-    y: float
-    
-class CoordinateHelperAfter:
-    @staticmethod
-    def distance_from_beginning(point: Point) -> float:
-        return sqrt(point.x*point.x + point.y*point.y)
-# After end
