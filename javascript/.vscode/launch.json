@@ -10,6 +10,16 @@
             "runtimeArgs": ["test"],
             "cwd": "${workspaceFolder}/tooling",
             "console": "integratedTerminal"
+          },
+          {
+            "name": "Baby steps",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test"],
+            "cwd": "${workspaceFolder}/baby_steps",
+            "console": "integratedTerminal"
           }
     ]
 }
