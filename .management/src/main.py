@@ -36,9 +36,11 @@ def insertLines(filename: str, start: int, excerpt: list[str]):
 
 
 def python():
-    # removeLines("../python/blob/worldbank.py")
-    # removeLines("../python/blob/test_worldbank.py")
-    adaptFile("../python/external_dependencies/test_htmlformatter.py")
+    # adaptFile("../python/blob/worldbank.py")
+    # adaptFile("../python/blob/test_worldbank.py")
+    # adaptFile("../python/external_dependencies/test_htmlformatter.py")
+    adaptFile("../python/global_state/globalstate.py")
+    adaptFile("../python/global_state/test_globalstate.py")
 
 
 python()
