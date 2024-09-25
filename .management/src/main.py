@@ -43,8 +43,10 @@ def python():
     # adaptFile("../python/global_state/globalstate.py")
     # adaptFile("../python/global_state/test_globalstate.py")
     # no adaptation needed for grow my code yet
-    adaptFile("../python/irritating_parameter/bankconnector.py")
-    adaptFile("../python/irritating_parameter/test_bankconnector.py")
+    # adaptFile("../python/irritating_parameter/bankconnector.py")
+    # adaptFile("../python/irritating_parameter/test_bankconnector.py")
+    adaptFile("../python/legacy_intro/legacyintro.py")
+    adaptFile("../python/legacy_intro/test_legacyintro.py")
 
 
 python()
