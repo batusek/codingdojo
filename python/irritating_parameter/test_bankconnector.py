@@ -24,7 +24,7 @@ class BankConnectorTest(unittest.TestCase):
         # After end
 
     def test_get_payments(self):
-        # TODO: rewrite the test by replacing token with an abstract interface
+        # TODO: rewrite the test (and production code) by replacing token with an abstract interface
         connector = BankConnector("https://api.mybank.cz/", OAuthToken)
         response = connector.getPayments(datetime(2024,1,1),datetime(2024,1,31))
         self.assertEqual(response, "Token A really complicated OAuth token that requires calling an external API")
