@@ -8,7 +8,7 @@ class InvoiceItemManager:
             f.write(f"{quantity};{price};{tax_rate};{total_with_tax}\n")
 
 # After start
-class InvoiceItemManagerA:
+class InvoiceItemManagerWithIsolatedSideEffect:
     def save_item_total_amount(self, quantity: float, price: float, tax_rate: float) -> None:
         total = quantity * price
         tax = total * tax_rate
