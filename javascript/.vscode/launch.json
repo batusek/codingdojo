@@ -17,8 +17,8 @@
             "request": "launch",
             "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
             "runtimeExecutable": "npm",
-            "runtimeArgs": ["test"],
-            "cwd": "${workspaceFolder}/baby_steps",
+            "runtimeArgs": ["test","--", "baby_steps"],
+            "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
           }
     ]
