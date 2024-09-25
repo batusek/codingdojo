@@ -45,8 +45,16 @@ def python():
     # no adaptation needed for grow my code yet
     # adaptFile("../python/irritating_parameter/bankconnector.py")
     # adaptFile("../python/irritating_parameter/test_bankconnector.py")
-    adaptFile("../python/legacy_intro/legacyintro.py")
-    adaptFile("../python/legacy_intro/test_legacyintro.py")
+    # adaptFile("../python/legacy_intro/legacyintro.py")
+    # adaptFile("../python/legacy_intro/test_legacyintro.py")
+    adaptFile("../python/refactoring_alphabet/changemethodsignature.py")
+    adaptFile("../python/refactoring_alphabet/test_changemethodsignature.py")
+    adaptFile("../python/refactoring_alphabet/extractmethod.py")
+    adaptFile("../python/refactoring_alphabet/test_extractmethod.py")
+    adaptFile("../python/refactoring_alphabet/introduceobject.py")
+    adaptFile("../python/refactoring_alphabet/test_introduceobject.py")
+    adaptFile("../python/refactoring_alphabet/replaceconstructor.py")
+    adaptFile("../python/refactoring_alphabet/test_replaceconstructor.py")
 
 
 python()
