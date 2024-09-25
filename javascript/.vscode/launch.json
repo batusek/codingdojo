@@ -7,10 +7,10 @@
             "request": "launch",
             "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
             "runtimeExecutable": "npm",
-            "runtimeArgs": ["test"],
-            "cwd": "${workspaceFolder}/tooling",
+            "runtimeArgs": ["test","--", "tooling"],
+            "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
-          },
+          }
           {
             "name": "Baby steps",
             "type": "node",
