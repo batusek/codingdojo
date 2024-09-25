@@ -37,7 +37,7 @@ class BankConnector:
         headers = {"Authorization": f"Token {self.token}"}
         return self.getResponse(url, headers)
     
-    def getResponse(self, url:str, headers: dict):
+    def getResponse(self, url: str, headers: dict):
         # does nothing in this exercise
         return headers["Authorization"]
         
