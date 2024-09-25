@@ -10,7 +10,7 @@
             "runtimeArgs": ["test","--", "tooling"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
-          }
+          },
           {
             "name": "Baby steps",
             "type": "node",
@@ -20,6 +20,16 @@
             "runtimeArgs": ["test","--", "baby_steps"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
+          },
+          {
+            "name": "Grow my code",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "grow_my_code"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
           }
-    ]
+     ]
 }
