@@ -1,10 +1,9 @@
 from dataclasses import dataclass
 from math import sqrt
 
-# Task
-# Change method signature to 
+# TODO: Change method signature to 
 # def distance_from_beginning(point: Point) -> float:
-# Do it in multiple steps in such a way that your tests NEVER fail
+# Do it in _multiple_ steps in such a way that your tests NEVER fail
 
 class CoordinateHelper:
     @staticmethod
@@ -12,6 +11,7 @@ class CoordinateHelper:
         return sqrt(x*x + y*y)
 
 
+# After start
 @dataclass
 class Point:
     x: float
@@ -21,4 +21,4 @@ class CoordinateHelperAfter:
     @staticmethod
     def distance_from_beginning(point: Point) -> float:
         return sqrt(point.x*point.x + point.y*point.y)
-    
+# After end

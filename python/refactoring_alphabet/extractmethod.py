@@ -9,12 +9,12 @@ class Item:
     is_taxable: bool
     
 
-# Before
 class PriceCalculator:
     def __init__(self, taxRate: float):
         self.taxRate = taxRate
     
     def calculate_total_price(self, items: list[Item]):
+        # TODO: extract method for calculating tax
         total: float = 0
         for item in items:
             total += item.price * item.quantity
@@ -22,8 +22,8 @@ class PriceCalculator:
                 total += item.price * item.quantity * self.taxRate
         return total    
     
-#After
-class PriceCalculatorA:
+# After start
+class PriceCalculatorAfter:
     def __init__(self, taxRate: float):
         self.taxRate = taxRate
     
@@ -39,3 +39,4 @@ class PriceCalculatorA:
             return item.price * item.quantity * self.taxRate
         else:
             return 0
+# After end

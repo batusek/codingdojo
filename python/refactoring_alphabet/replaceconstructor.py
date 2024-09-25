@@ -9,23 +9,24 @@ class CloudStorage:
         f.write(data)
         f.close()
        
-# Task: replace a direct constructor call with a factory call 
         
 class Exporter:
     def __init__(self):
+        # TODO: replace a direct constructor call with a factory call 
         self.storage = CloudStorage("export.csv")
         
     def export(self, data: bytes):
         self.storage.write(data)
 
-# After
+# After start
 class StorageFactory:
     def createStorage(self, name:str):
         return CloudStorage(name)
         
-class ExporterA:
+class ExporterwithFatoryCall:
     def __init__(self):
         self.storage = StorageFactory().createStorage("export.csv")
         
     def export(self, data: bytes):
         self.storage.write(data)
+# After end
