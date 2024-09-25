@@ -1,7 +1,7 @@
 import shutil
 
 
-def removeLines(filename: str):
+def adaptFile(filename: str):
     with open(filename, "r") as f:
         lines = f.readlines()
 
@@ -14,6 +14,10 @@ def removeLines(filename: str):
             if "After end" in line:
                 writeLine = True
                 continue
+
+            if "Uncomment" in line:
+                components = line.split(":")
+                f.write(components[1])
 
             if writeLine:
                 f.write(line)
@@ -32,7 +36,10 @@ def insertLines(filename: str, start: int, excerpt: list[str]):
 
 
 def python():
-    removeLines("../python/blob/worldbank.py")
+    # removeLines("../python/blob/worldbank.py")
+    # removeLines("../python/blob/test_worldbank.py")
+    adaptFile("../python/external_dependencies/test_htmlformatter.py")
+
 
 python()
 #javaScript()
