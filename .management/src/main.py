@@ -51,8 +51,10 @@ def python():
 
 
 def javaScript():
-    adaptFile("../javascript/tooling/leapyear.ts")
-    adaptFile("../javascript/tooling/leapyear.test.ts")
+    # adaptFile("../javascript/tooling/leapyear.ts")
+    # adaptFile("../javascript/tooling/leapyear.test.ts")
+    adaptFile("../javascript/baby_steps/numbers.ts")
+    adaptFile("../javascript/baby_steps/numbers.test.ts")
 
 
 # python()
