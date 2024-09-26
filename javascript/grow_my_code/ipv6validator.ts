@@ -94,7 +94,7 @@ export class IPv6Address {
 
     // After end
     contract(): string | boolean {
-        // Uncomment:   throw Error("Not implemented");
+        // Uncomment:      throw Error("Not implemented");
         // After start
         if (this.address =="::")
             return this.address
