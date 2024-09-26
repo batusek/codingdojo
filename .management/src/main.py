@@ -17,7 +17,8 @@ def adaptFile(filename: str):
 
             if "Uncomment" in line:
                 components = line.split(":")
-                f.write(components[1])
+                f.write(":".join(components[1:]))
+                continue
 
             if writeLine:
                 f.write(line)
@@ -49,4 +50,10 @@ def python():
     adaptFile("../python/tooling/test_leapyear.py")
 
 
-python()
+def javaScript():
+    adaptFile("../javascript/tooling/leapyear.ts")
+    adaptFile("../javascript/tooling/leapyear.test.ts")
+
+
+# python()
+javaScript()
