@@ -1,10 +1,10 @@
 {
-  "name": "@coding_dojo",
+  "name": "@batusek/coding_dojo",
   "type": "module",
   "private": true,
   "main": "index.js",
   "scripts": {
-    "//":  {"test": "DEBUG=* vitest run", },
+    "//":  {"test": "DEBUG=* vitest run" },
     "test": "vitest run",
     "watch": "vitest watch"
   },
