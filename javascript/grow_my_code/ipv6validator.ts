@@ -13,7 +13,9 @@ export class IPv6Address {
 
     // After end
     constructor(input:string) {
+        // After start
         this.address = input;
+        // After end
     }
 
     isValid(): boolean {
