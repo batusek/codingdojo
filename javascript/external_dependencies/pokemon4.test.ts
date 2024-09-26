@@ -1,5 +1,8 @@
 import { expect, test } from 'vitest'
-import { PokemonPedia, PokemonAPIService } from "./pokemon4";
+import { PokemonPedia } from "./pokemon4";
+// After start
+import { PokemonAPIService } from "./pokemon4";
+// After end
 
 // After start
 class TestPokemonApiService implements PokemonAPIService {
