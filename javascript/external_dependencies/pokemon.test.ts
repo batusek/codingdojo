@@ -1,8 +1,12 @@
+// After start
 import fetch from 'node-fetch'
+// After end
 import { expect, test } from 'vitest'
 import { PokemonPedia } from "./pokemon";
 
+// After start
 globalThis.fetch = fetch; // we use a default browser fetch for fetching
+// After end
 
 test("integration test", async () => {
     // Uncomment:   expect(true).toBeFalsy();
