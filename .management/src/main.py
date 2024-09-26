@@ -61,8 +61,10 @@ def javaScript():
     # adaptFile("../javascript/external_dependencies/pokemon.test.ts")
     # shutil.copy("../javascript/external_dependencies/pokemon.ts", "../javascript/external_dependencies/pokemon2.ts")
     # adaptFile("../javascript/external_dependencies/pokemon2.test.ts")
-    shutil.copy("../javascript/external_dependencies/pokemon.ts", "../javascript/external_dependencies/pokemon3.ts")
-    adaptFile("../javascript/external_dependencies/pokemon3.test.ts")
+    # shutil.copy("../javascript/external_dependencies/pokemon.ts", "../javascript/external_dependencies/pokemon3.ts")
+    # adaptFile("../javascript/external_dependencies/pokemon3.test.ts")
+    shutil.copy("../javascript/external_dependencies/pokemon.ts", "../javascript/external_dependencies/pokemon4.ts")
+    adaptFile("../javascript/external_dependencies/pokemon4.test.ts")
 
 
 # python()
