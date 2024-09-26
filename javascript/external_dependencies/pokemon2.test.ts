@@ -1,11 +1,16 @@
+// After start
 import createFetchMock from 'vitest-fetch-mock';
+// After end
 import { expect, test, vi } from 'vitest';
 import { PokemonPedia } from "./pokemon2";
 
+// After start
 const fetchMocker = createFetchMock(vi);
 fetchMocker.enableMocks();
+// After end
 
 test("test with mocks", async () => {
+    // After start
     var pokemon_response = JSON.stringify(
         {
             "name": "raichu", 
@@ -41,4 +46,5 @@ test("test with mocks", async () => {
     expect(data.damage_class).toEqual("special");
     expect(data.is_legendary).toBeFalsy();
     expect(data.growth_rate).toEqual("high");
+    // After end
 });
