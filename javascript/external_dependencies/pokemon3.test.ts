@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest'
 import { PokemonPedia } from "./pokemon3";
 
+// After start
 class TestablePokemonPedia extends PokemonPedia {
     urls: Map<string,string>;
 
@@ -23,8 +24,10 @@ class TestablePokemonPedia extends PokemonPedia {
         return Promise.reject(new Error('bad url ' + url));
     }
 }
+//After end
 
 test("testing with inheritance", async () => {
+    // After start
     var pokemonPedia = new TestablePokemonPedia(); 
     pokemonPedia.registerUri("pokemon", JSON.stringify(
         {
@@ -49,5 +52,6 @@ test("testing with inheritance", async () => {
     expect(data.damage_class).toEqual("special");
     expect(data.is_legendary).toBeFalsy();
     expect(data.growth_rate).toEqual("high");
+    // After end
 });
 
