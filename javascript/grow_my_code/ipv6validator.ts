@@ -11,11 +11,11 @@ export class IPv6Address {
     // After start
     address: string;
 
+    // After end
     constructor(input:string) {
         this.address = input;
     }
 
-    // After end
     isValid(): boolean {
         throw Error("Not implemented");
     }
