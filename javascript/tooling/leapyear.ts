@@ -1,5 +1,6 @@
 export function leapYear(year: number) {
     // Uncomment:   throw {name : "NotImplementedError", message : "not started"}; 
+    // After start
     if (year % 400 == 0)
         return true;
 
