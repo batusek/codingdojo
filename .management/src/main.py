@@ -55,8 +55,10 @@ def javaScript():
     # adaptFile("../javascript/tooling/leapyear.test.ts")
     # adaptFile("../javascript/baby_steps/numbers.ts")
     # adaptFile("../javascript/baby_steps/numbers.test.ts")
-    adaptFile("../javascript/grow_my_code/ipv6validator.ts")
-    adaptFile("../javascript/grow_my_code/ipv6validator.test.ts")
+    # adaptFile("../javascript/grow_my_code/ipv6validator.ts")
+    # adaptFile("../javascript/grow_my_code/ipv6validator.test.ts")
+    adaptFile("../javascript/external_dependencies/pokemon.ts")
+    adaptFile("../javascript/external_dependencies/pokemon.test.ts")
 
 
 # python()
