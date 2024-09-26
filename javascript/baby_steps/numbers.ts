@@ -16,10 +16,10 @@ export class NumbersInWords {
 
         return result;
     }
-    // After end
 
+    // After end
     static printNumber(number: number) {
-        // Uncomment:   throw {name : "NotImplementedError", message : "not started"}; 
+        // Uncomment:       throw {name : "NotImplementedError", message : "not started"}; 
         // After start
         if (number<100)
             return this.printTensAndLower(number);
