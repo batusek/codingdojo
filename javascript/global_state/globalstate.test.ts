@@ -1,18 +1,19 @@
 import { expect, test } from 'vitest';
-import { Configuration, ConfigurationReadyToTest } from './globalstate';
+// import { Configuration, ConfigurationReadyToTest } from './globalstate';
+import * as config from './globalstate';
 
 test('should get DB name', () => {
-    expect(Configuration.getValue('DB_NAME')).to.equal('dev');
+    expect(config.Configuration.getValue('DB_NAME')).to.equal('dev');
 });
 
 test('should get DB user', () => {
-    expect(Configuration.getValue('DB_USER')).to.equal('developer');
+    expect(config.Configuration.getValue('DB_USER')).to.equal('developer');
 });
 
 
 // After start
-class TestableConfiguration extends ConfigurationReadyToTest {
-    config
+class TestableConfiguration extends config.ConfigurationReadyToTest {
+    config: Record<string, any>;
 
     constructor() {
         super();
@@ -30,8 +31,8 @@ test('should get DB name with custom instance', () => {
         DB_NAME: 'internalDB',
         DB_USER: 'internalUser',
     };
-    ConfigurationReadyToTest.setInstance(configuration);
-    expect(ConfigurationReadyToTest.getValue('DB_NAME')).to.equal('internalDB');
+    config.ConfigurationReadyToTest.setInstance(configuration);
+    expect(config.ConfigurationReadyToTest.getValue('DB_NAME')).to.equal('internalDB');
 });
 
 test('should get DB user with custom instance', () => {
@@ -40,7 +41,7 @@ test('should get DB user with custom instance', () => {
         DB_NAME: 'internalDB',
         DB_USER: 'internalUser',
     };
-    ConfigurationReadyToTest.setInstance(configuration);
-    expect(ConfigurationReadyToTest.getValue('DB_USER')).to.equal('internalUser');
+    config.ConfigurationReadyToTest.setInstance(configuration);
+    expect(config.ConfigurationReadyToTest.getValue('DB_USER')).to.equal('internalUser');
 });
 // After end
