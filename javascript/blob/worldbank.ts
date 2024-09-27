@@ -18,25 +18,31 @@ export class DataFetcher {
   }
   
   export class DataProcessor {
-    country: string;
     fetcher: DataFetcher;
 
     constructor() {
       // Complicated initialization can go here, resulting in country = "USA"
-      this.country = "USA";
-      this.fetcher = this.createFetcher(this.country); // Create fetcher during initialization
+      let country = "USA";
+
+      // create an object based on the previously constructed data
+      // Uncomment: this.fetcher = new DataFetcher(country)
+      // After start
+      this.fetcher = this.createFetcher(country);
     }
   
     createFetcher(country: string): DataFetcher {
       return new DataFetcher(country);
     }
+    // After end
   
     async getGdpPerCapita(): Promise<number> {
       const data = await this.fetcher.fetchData("NY.GDP.PCAP.KD");
       return data[1][0].value;
     }
-  
+
+    // After start
     setFetcher(fetcher: DataFetcher) {
         this.fetcher = fetcher
     }
+    // After end
   }
