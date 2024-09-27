@@ -21,6 +21,7 @@ test('should get GDP per capita for Czech Republic', async () => {
     expect(gdp).toBeCloseTo(65020, 0); // Adjust the expected value as needed
 });
 
+// After start
 test('should get GDP per capita for Czech Republic via setFetcher method', async () => {
     const processor = new DataProcessor();
     processor.setFetcher(new DataFetcher("CZE"));
@@ -33,3 +34,4 @@ test('should get GDP per capita for Czech Republic via subclass and override', a
     const gdp = await processor.getGdpPerCapita();
     expect(gdp).toBeCloseTo(19800, 0); // Adjust the expected value as needed
 });
+// After end

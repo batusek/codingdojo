@@ -32,8 +32,8 @@ export class DataFetcher {
   
     createFetcher(country: string): DataFetcher {
       return new DataFetcher(country);
+      // After end
     }
-    // After end
   
     async getGdpPerCapita(): Promise<number> {
       const data = await this.fetcher.fetchData("NY.GDP.PCAP.KD");
