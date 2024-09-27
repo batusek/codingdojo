@@ -1,6 +1,4 @@
-// After start
 import fetch from 'node-fetch'
-// After end
 import { expect, test } from 'vitest';
 import { DataProcessor, DataFetcher } from './worldbank';
 
