@@ -52,6 +52,16 @@
             "console": "integratedTerminal"
           },
           {
+            "name": "Legacy intro",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "legacy_intro"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+          },
+          {
             "name": "Tooling",
             "type": "node",
             "request": "launch",
