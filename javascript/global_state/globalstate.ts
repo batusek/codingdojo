@@ -17,12 +17,12 @@ export class ConfigurationAsSingleton {
     return this._instance;
   }
 
-  getValue(key: string): string | undefined {
+  protected getValueInstance(key: string): string | undefined {
     return process.env[key];
   }
 
-  static get(key: string): string | undefined {
-    return this.instance().getValue(key);
+  static getValue(key: string): string | undefined {
+    return this.instance().getValueInstance(key);
   }
 }
 
@@ -39,12 +39,12 @@ export class ConfigurationReadyToTest {
     this._instance = instance;
   }
 
-  getValue(key: string): string | undefined {
+  protected getValueInstance(key: string): string | undefined {
     return process.env[key];
   }
 
-  static get(key: string): string | undefined {
-    return this.instance().getValue(key);
+  static getValue(key: string): string | undefined {
+    return this.instance().getValueInstance(key);
   }
 }
 // After end

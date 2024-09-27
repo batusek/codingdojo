@@ -32,6 +32,16 @@
             "console": "integratedTerminal"
           },
           {
+            "name": "Global state",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "global_state"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+          },
+          {
             "name": "Tooling",
             "type": "node",
             "request": "launch",
