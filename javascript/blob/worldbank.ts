@@ -25,7 +25,7 @@ export class DataFetcher {
       let country = "USA";
 
       // create an object based on the previously constructed data
-      // Uncomment: this.fetcher = new DataFetcher(country)
+      // Uncomment:     this.fetcher = new DataFetcher(country)
       // After start
       this.fetcher = this.createFetcher(country);
     }

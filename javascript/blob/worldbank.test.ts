@@ -4,16 +4,16 @@ import fetch from 'node-fetch'
 import { expect, test } from 'vitest';
 import { DataProcessor, DataFetcher } from './worldbank';
 
-// After start
 globalThis.fetch = fetch; // we use a default browser fetch for fetching
-// After end
 
 
+// After start
 class TestDataProcessor extends DataProcessor {
   createFetcher(country: string): DataFetcher {
     return new DataFetcher("CZE");
   }
 }
+// After end
 
 test('should get GDP per capita for Czech Republic', async () => {
     const processor = new DataProcessor();
