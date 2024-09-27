@@ -62,6 +62,16 @@
             "console": "integratedTerminal"
           },
           {
+            "name": "Refactoring alphabet",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "refactoring_alphabet"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+          },
+          {
             "name": "Tooling",
             "type": "node",
             "request": "launch",
