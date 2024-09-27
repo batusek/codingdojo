@@ -21,7 +21,7 @@ export class BankConnector {
   }
   // After end
 
-  // Uncomment:     constructor(public baseUrl: string, public token: OAuthTokenType)
+  // Uncomment:  constructor(public baseUrl: string, public token: OAuthTokenType) {
   // After start
   constructor(public baseUrl: string, public token: OAuthTokenType | undefined) {
   // After end
