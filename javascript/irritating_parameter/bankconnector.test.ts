@@ -1,5 +1,8 @@
 import { expect, test } from 'vitest';
-import { BankConnector, OAuthTokenType, OAuthToken, TokenProvider } from './bankconnector';
+import { BankConnector, OAuthTokenType, OAuthToken } from './bankconnector';
+// After start
+import { TokenProvider } from './bankconnector';
+// After end
 
 // After start
 class TestTokenProvider extends TokenProvider {
