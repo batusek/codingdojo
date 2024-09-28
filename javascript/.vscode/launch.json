@@ -10,8 +10,8 @@
             "runtimeArgs": ["test"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
-          },
-          {
+        },
+        {
             "name": "Baby steps",
             "type": "node",
             "request": "launch",
@@ -20,8 +20,8 @@
             "runtimeArgs": ["test","--", "baby_steps"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
-          },
-          {
+        },
+        {
             "name": "Blob",
             "type": "node",
             "request": "launch",
@@ -30,78 +30,8 @@
             "runtimeArgs": ["test","--", "blob"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
-          },
-          {
-            "name": "Global state",
-            "type": "node",
-            "request": "launch",
-            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
-            "runtimeExecutable": "npm",
-            "runtimeArgs": ["test","--", "global_state"],
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal"
-          },
-          {
-            "name": "Irritating parameter",
-            "type": "node",
-            "request": "launch",
-            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
-            "runtimeExecutable": "npm",
-            "runtimeArgs": ["test","--", "irritating_parameter"],
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal"
-          },
-          {
-            "name": "Legacy intro",
-            "type": "node",
-            "request": "launch",
-            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
-            "runtimeExecutable": "npm",
-            "runtimeArgs": ["test","--", "legacy_intro"],
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal"
-          },
-          {
-            "name": "Refactoring alphabet",
-            "type": "node",
-            "request": "launch",
-            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
-            "runtimeExecutable": "npm",
-            "runtimeArgs": ["test","--", "refactoring_alphabet"],
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal"
-          },
-          {
-            "name": "Side effect",
-            "type": "node",
-            "request": "launch",
-            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
-            "runtimeExecutable": "npm",
-            "runtimeArgs": ["test","--", "side_effect"],
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal"
-          },
-          {
-            "name": "Tooling",
-            "type": "node",
-            "request": "launch",
-            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
-            "runtimeExecutable": "npm",
-            "runtimeArgs": ["test","--", "tooling"],
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal"
-          },
-          {
-            "name": "Grow my code",
-            "type": "node",
-            "request": "launch",
-            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
-            "runtimeExecutable": "npm",
-            "runtimeArgs": ["test","--", "grow_my_code"],
-            "cwd": "${workspaceFolder}",
-            "console": "integratedTerminal"
-          },
-          {
+        },
+        {
             "name": "External dependencies",
             "type": "node",
             "request": "launch",
@@ -110,6 +40,76 @@
             "runtimeArgs": ["test","--", "external_dependencies"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
-          }
+        },
+        {
+            "name": "Global state",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "global_state"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Grow my code",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "grow_my_code"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Irritating parameter",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "irritating_parameter"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Legacy intro",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "legacy_intro"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Refactoring alphabet",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "refactoring_alphabet"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Side effect",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "side_effect"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Tooling",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "tooling"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
      ]
 }
