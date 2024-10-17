@@ -1,3 +1,6 @@
 class NumberFormatter:
     def format(self, number: int) -> str:
-        return str(number)
+        if number < 1000:
+            return str(number)
+        else:
+            return f"{number//1000},{number%1000:03d}"
