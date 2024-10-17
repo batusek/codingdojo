@@ -1,2 +1,3 @@
 class NumberFormatter:
-    pass
+    def format(self, number: int) -> str:
+        return str(number)
