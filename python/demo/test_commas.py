@@ -7,3 +7,6 @@ class NumberFormatterTest(unittest.TestCase):
 
     def test_ten_prints_without_comma(self):
         self.assertEqual(NumberFormatter().format(10),"10")
+
+    def test_hundred_prints_without_comma(self):
+        self.assertEqual(NumberFormatter().format(100),"100")
