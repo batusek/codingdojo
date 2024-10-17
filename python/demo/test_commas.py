@@ -13,3 +13,6 @@ class NumberFormatterTest(unittest.TestCase):
 
     def test_thousand_prints_with_comma(self):
         self.assertEqual(NumberFormatter().format(1000),"1,000")
+
+    def test_million_prints_with_two_commas(self):
+        self.assertEqual(NumberFormatter().format(1000000),"1,000,000")
