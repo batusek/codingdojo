@@ -1,3 +1,4 @@
+from os import getcwd
 import shutil
 
 
@@ -83,6 +84,7 @@ def javaScript():
     adaptFile("../javascript/refactoring_alphabet/replaceconstructor.test.ts")
     adaptFile("../javascript/side_effect/invoiceitemmanager.ts")
     adaptFile("../javascript/side_effect/invoiceitemmanager.test.ts")
+    adaptFile("../README.md")
 
 
 python()
