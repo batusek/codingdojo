@@ -18,7 +18,7 @@ export class ColorEvaluator {
     }
 
     nearestColor(): string {
-        let highest = this.findHighest(this.input);
+        let highest = this.findHighestIndex(this.input);
 
         switch (highest) {
             case 0: return "f00";
@@ -29,20 +29,14 @@ export class ColorEvaluator {
         throw "Unexpected input";
     }
 
-    private findHighest(input: string): number {
-        let red = parseInt(input[0],16);
-        let green = parseInt(input[1],16);
-        let blue = parseInt(input[2],16);
+    private findHighestIndex(input: string): number {
+        let highestIndex: number = 0
+        for (let i = 1; i < 3; i++) {
+            if (parseInt(input[i],16) > parseInt(input[highestIndex],16)) {
+              highestIndex = i;
+            }
+        }
 
-        if (red>green)
-            if (red>blue)
-                return 0;
-            else
-                return 2;
-        else
-            if (green>blue)
-                return 1;
-            else
-                return 2;
+        return highestIndex;
     }
 }
