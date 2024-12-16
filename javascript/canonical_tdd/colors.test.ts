@@ -24,3 +24,7 @@ test("a near-green color given returns green", () => {
 test("a near-blue color given returns blue", () => {
     expect(new ColorEvaluator("def").nearestColor()).toBe("00f");
 })
+
+test("a far-blue color given returns blue", () => {
+    expect(new ColorEvaluator("ee0").farthestColor()).toBe("00f");
+})
