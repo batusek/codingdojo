@@ -1,6 +1,11 @@
 import { expect, test } from 'vitest'
 import { ColorEvaluator } from './colors'
 
+test("name and implement the first test", () => {
+    // do nothing
+})
+
+// After start
 test("a red color given returns red", () => {
     expect(new ColorEvaluator("f00").nearestColor()).toBe("f00");
 })
@@ -36,4 +41,4 @@ test("a far-green color given returns green", () => {
 test("a far-blue color given returns blue", () => {
     expect(new ColorEvaluator("ee0").farthestColor()).toBe("00f");
 })
-
+// After end

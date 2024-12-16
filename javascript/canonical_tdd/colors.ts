@@ -11,6 +11,7 @@
 //  - choose a test naming convention and keep it for the whole exercise
 
 export class ColorEvaluator {
+    // After start
     input: string;
 
     constructor(input: string) {
@@ -20,6 +21,11 @@ export class ColorEvaluator {
     nearestColor(): string {
         let highest = this.findHighestIndex(this.input);
         return this.chooseOutputColor(highest);
+    }
+
+    farthestColor(): string {
+        let lowest = this.findLowestIndex(this.input);
+        return this.chooseOutputColor(lowest);
     }
 
     private findHighestIndex(input: string): number {
@@ -44,11 +50,6 @@ export class ColorEvaluator {
 
     }
 
-    farthestColor(): string {
-        let lowest = this.findLowestIndex(this.input);
-        return this.chooseOutputColor(lowest);
-    }
- 
     private findLowestIndex(input: string): number {
         let highestIndex: number = 0
         for (let i = 1; i < 3; i++) {
@@ -59,5 +60,6 @@ export class ColorEvaluator {
 
         return highestIndex;
     }
+    // After end
     
 }
