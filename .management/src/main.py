@@ -58,6 +58,8 @@ def javaScript():
     adaptFile("../javascript/baby_steps/numbers.test.ts")
     adaptFile("../javascript/blob/worldbank.ts")
     adaptFile("../javascript/blob/worldbank.test.ts")
+    adaptFile("../javascript/canonical_tdd/colors.ts")
+    adaptFile("../javascript/canonical_tdd/colors.test.ts")
     adaptFile("../javascript/global_state/globalstate.ts")
     adaptFile("../javascript/global_state/globalstate.test.ts")
     adaptFile("../javascript/grow_my_code/ipv6validator.ts")
