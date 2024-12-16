@@ -2,9 +2,6 @@ import { expect, test, describe, beforeEach } from 'vitest';
 import { readFileSync, unlinkSync } from 'fs';
 
 import { InvoiceItemManager } from './invoiceitemmanager';
-// After start
-import { InvoiceItemManagerWithIsolatedSideEffect } from './invoiceitemmanager';
-// After end
 
 describe('InvoiceItemManager', () => {
     beforeEach(() => {
@@ -30,20 +27,3 @@ describe('InvoiceItemManager', () => {
   });
 });
 
-// After start
-class TestableInvoiceItemManager extends InvoiceItemManagerWithIsolatedSideEffect {
-  output = '';
-
-  override save(line: string): void {
-    this.output = line;
-  }
-}
-
-test('calculation with subclass and overrride', () => {
-    const manager = new TestableInvoiceItemManager();
-    manager.saveItemTotalAmount(1, 3, 0.2);
-
-    const total = manager.output.split(';').slice(-1)[0];
-    expect(parseFloat(total)).toBeCloseTo(3.6, 2);
-});
-// After end

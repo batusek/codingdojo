@@ -1,4 +1,4 @@
-// For testing with mocks, no change in the production code is needed
+
 export class PokemonPedia {
     async investigate(name: string) {
         // See https://pokeapi.co/docs/v2 for API description

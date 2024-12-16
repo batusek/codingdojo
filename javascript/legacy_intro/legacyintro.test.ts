@@ -26,11 +26,3 @@ describe('InvoiceItemManager', () => {
   });
 });
 
-// After start
-describe('InvoiceItemManagerRefactored', () => {
-  test('invoice item amount calculated correctly', () => {
-    const manager = new InvoiceItemManagerRefactored();
-    expect(manager.calculateTotal(1, 3, 0.2)).toBeCloseTo(3.6, 2);
-  });
-});
-// After end

@@ -8,20 +8,3 @@ export class CoordinateHelper {
     }
   }
   
-  // After start
-export class Point {
-    x: number
-    y: number
-
-    constructor(x: number, y: number) {
-      this.x = x;
-      this.y = y;
-    }
-  }
-  
-  export class CoordinateHelperAfter {
-    static distance_from_beginning(point: Point) {
-      return Math.sqrt(point.x * point.x + point.y * point.y);
-    }
-  }
-  // After end

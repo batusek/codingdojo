@@ -87,10 +87,3 @@ Eliminate a side effect so that a method can be tested
 
 
 
-[//]: <> (After start)
-# TODO
-## Exercise X - Refactor and existing class/method
-E.g. http://codingdojo.org/kata/GildedRose/
-
-
-[//]: <> (After end)

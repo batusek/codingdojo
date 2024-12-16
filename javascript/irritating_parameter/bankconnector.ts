@@ -1,30 +1,11 @@
 export type OAuthTokenType = string;
 export const OAuthToken = 'A really complicated OAuth token that requires calling an external API';
 
-// After start
-export abstract class TokenProvider {
-  abstract token(): OAuthTokenType;
-}
-
-class OAuthTokenProvider extends TokenProvider {
-  token(): OAuthTokenType {
-    return OAuthToken;
-  }
-}
-// After end
 
 export class BankConnector {
 
-  // After start
-  static create(baseUrl: string, provider: TokenProvider): BankConnector {
-    return new BankConnector(baseUrl, provider.token());
-  }
-  // After end
 
-  // Uncomment:  constructor(public baseUrl: string, public token: OAuthTokenType) {
-  // After start
-  constructor(public baseUrl: string, public token: OAuthTokenType | undefined) {
-  // After end
+  constructor(public baseUrl: string, public token: OAuthTokenType) {
     this.baseUrl = baseUrl;
     this.token = token;
   }

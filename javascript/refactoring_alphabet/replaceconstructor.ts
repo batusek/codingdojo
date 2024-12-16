@@ -22,23 +22,3 @@ export class Exporter {
   }
 }
 
-// After start
-class StorageFactory {
-  createStorage(name: string): CloudStorage {
-    return new CloudStorage(name);
-  }
-}
-
-export class ExporterWithFactoryCall {
-  storage: CloudStorage;
-  
-  constructor() {
-    const storageFactory = new StorageFactory();
-    this.storage = storageFactory.createStorage('export.csv');
-  }
-
-  export(data: Uint8Array): void {
-    this.storage.write(data);
-  }
-}
-// After end

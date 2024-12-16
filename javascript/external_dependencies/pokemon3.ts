@@ -1,13 +1,14 @@
+
 export class PokemonPedia {
     async investigate(name: string) {
         // See https://pokeapi.co/docs/v2 for API description
-        const data_pokemon = await this.fetchUrl('https://pokeapi.co/api/v2/pokemon/' + name + '/')
+        const data_pokemon = await fetch('https://pokeapi.co/api/v2/pokemon/' + name + '/')
         var pokemon = await data_pokemon.json();
 
-        const data_type = await this.fetchUrl(pokemon.types[0].type.url);
+        const data_type = await fetch(pokemon.types[0].type.url);
         var type = await data_type.json()
 
-        const data_species = await this.fetchUrl(pokemon.species.url);
+        const data_species = await fetch(pokemon.species.url);
         var species = await data_species.json()
 
         const result = {
@@ -18,9 +19,5 @@ export class PokemonPedia {
           };
 
         return result;
-    }
-
-    protected async fetchUrl(url: string) {
-        return fetch(url);
     }
 }

@@ -25,14 +25,7 @@ export class DataFetcher {
       let country = "USA";
 
       // create an object based on the previously constructed data
-      // Uncomment:     this.fetcher = new DataFetcher(country)
-      // After start
-      this.fetcher = this.createFetcher(country);
-    }
-  
-    createFetcher(country: string): DataFetcher {
-      return new DataFetcher(country);
-      // After end
+     this.fetcher = new DataFetcher(country)
     }
   
     async getGdpPerCapita(): Promise<number> {
@@ -40,9 +33,4 @@ export class DataFetcher {
       return data[1][0].value;
     }
 
-    // After start
-    setFetcher(fetcher: DataFetcher) {
-        this.fetcher = fetcher
-    }
-    // After end
   }

@@ -1,2 +1,2 @@
 def isLeapYear(year):
-    return True    # Uncomment:    return True
+    return True
