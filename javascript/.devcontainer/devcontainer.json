@@ -14,7 +14,8 @@
 				"dbaeumer.vscode-eslint",
 				"octref.vetur",
 				"ms-azuretools.vscode-docker",
-				"christian-kohler.npm-intellisense"
+				"christian-kohler.npm-intellisense",
+				"vitest.explorer"
 			]
 		}
 	},

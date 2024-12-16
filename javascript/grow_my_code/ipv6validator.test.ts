@@ -6,6 +6,13 @@ test("happy path eight groups filled with non zero octets", () => {
     expect(new IPv6Address(input).contract()).toEqual(input);
 });
 
+// After start
+// alternative naming
+test("IPv6Address.contract: when input is double colon then do not change it", () => {
+    let input = "::"
+    expect(new IPv6Address(input).contract()).toEqual(input);
+});
+
 test("double colon is a valid address that cannot be contracted", () => {
     let input = "::"
     expect(new IPv6Address(input).contract()).toEqual(input);
@@ -90,3 +97,4 @@ test("one double colon is correct", () => {
     let input = "123f:123f:123f:123f::123f"
     expect(new IPv6Address(input).contract()).toEqual("123f:123f:123f:123f::123f");;
 });
+// After end

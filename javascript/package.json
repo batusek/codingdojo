@@ -1,14 +1,19 @@
 {
-  "name": "@tddtraining/exercise4",
+  "name": "@batusek/coding_dojo",
   "type": "module",
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=* vitest run",
+    "//": {
+      "test": "DEBUG=* vitest run"
+    },
+    "test": "vitest run",
     "watch": "vitest watch"
   },
   "devDependencies": {
+    "@types/node": "^22.7.3",
     "debug": "latest",
+    "dotenv": "latest",
     "node-fetch": "latest",
     "vite": "latest",
     "vitest": "latest",

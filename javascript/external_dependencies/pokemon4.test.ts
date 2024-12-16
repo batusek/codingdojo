@@ -1,6 +1,10 @@
 import { expect, test } from 'vitest'
-import { PokemonPedia, PokemonAPIService } from "./pokemon4";
+import { PokemonPedia } from "./pokemon4";
+// After start
+import { PokemonAPIService } from "./pokemon4";
+// After end
 
+// After start
 class TestPokemonApiService implements PokemonAPIService {
     urls: Map<string,string>;
 
@@ -20,8 +24,10 @@ class TestPokemonApiService implements PokemonAPIService {
         return Promise.reject(new Error('bad url ' + url));
     }
 }
+// After end
 
-test("integration test", async () => {
+test("test with explicit dependency", async () => {
+    // After start
     var apiService = new TestPokemonApiService()
     apiService.registerUri("pokemon", JSON.stringify(
         {
@@ -47,5 +53,6 @@ test("integration test", async () => {
     expect(data.damage_class).toEqual("special");
     expect(data.is_legendary).toBeFalsy();
     expect(data.growth_rate).toEqual("high");
+    // After end
 });
 

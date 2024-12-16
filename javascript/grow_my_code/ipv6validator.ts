@@ -1,21 +1,28 @@
+// After start
 class IPv6ParsingError extends Error {
     constructor(message:string) {
         super(message);
         this.name = "IPv6ParsingError";
     }
 }
+// After end
 
 export class IPv6Address {
+    // After start
     address: string;
 
+    // After end
     constructor(input:string) {
+        // After start
         this.address = input;
+        // After end
     }
 
     isValid(): boolean {
         throw Error("Not implemented");
     }
 
+    // After start
     private isZero(component:string): boolean {
        return /^0+$/.test(component) 
     }
@@ -87,7 +94,10 @@ export class IPv6Address {
         return result;
     }
 
+    // After end
     contract(): string | boolean {
+        // Uncomment:      throw Error("Not implemented");
+        // After start
         if (this.address =="::")
             return this.address
 
@@ -110,5 +120,6 @@ export class IPv6Address {
 
             throw e;
         }
+        // After end
     }
 }

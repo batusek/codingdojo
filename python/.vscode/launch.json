@@ -104,6 +104,15 @@
             "console": "integratedTerminal"
         },        
         {
+            "name": "TDD demo",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","demo"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+       {
             "name": "Python: Current File",
             "type": "debugpy",
             "request": "launch",
