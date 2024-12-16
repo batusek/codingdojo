@@ -2,13 +2,13 @@ import { expect, test } from 'vitest'
 import { ColorEvaluator } from './colors'
 
 test("a red color given returns red", () => {
-    expect(ColorEvaluator.nearestColor("f00")).toBe("f00");
+    expect(new ColorEvaluator("f00").nearestColor()).toBe("f00");
 })
 
 test("a green color given returns green", () => {
-    expect(ColorEvaluator.nearestColor("0f0")).toBe("0f0");
+    expect(new ColorEvaluator("0f0").nearestColor()).toBe("0f0");
 })
 
 test("a blue color given returns blue", () => {
-    expect(ColorEvaluator.nearestColor("00f")).toBe("00f");
+    expect(new ColorEvaluator("00f").nearestColor()).toBe("00f");
 })

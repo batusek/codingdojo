@@ -11,7 +11,13 @@
 //  - choose a test naming convention and keep it for the whole exercise
 
 export class ColorEvaluator {
-    static nearestColor(input: string): string {
-        return input;
+    input: string;
+
+    constructor(input: string) {
+        this.input = input;
+    }
+
+    nearestColor(): string {
+        return this.input;
     }
 }
