@@ -29,6 +29,10 @@ test("a far-red color given returns red", () => {
     expect(new ColorEvaluator("678").farthestColor()).toBe("f00");
 })
 
+test("a far-green color given returns green", () => {
+    expect(new ColorEvaluator("f04").farthestColor()).toBe("0f0");
+})
+
 test("a far-blue color given returns blue", () => {
     expect(new ColorEvaluator("ee0").farthestColor()).toBe("00f");
 })
