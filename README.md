@@ -11,21 +11,24 @@
 
 ## Steps
 
-- Checkout repo `git clone https://github.com/batusek/tddtraining.git`
+- Checkout repo `git clone https://github.com/batusek/codingdojo.git`
 - Start Visual Studio Code
-- Command Palette (F1): Select **Remote-Containers: Open Folder in Container...** and Select folder where you cloned the git repo
+- Command Palette (F1): Select **Remote-Containers: Open Folder in Container...** and Select subfolder with your language of choice
 
 ### Python
-- Command Palette (F1): **Python: Run All Tests** or go to Test Explorer and click on the green arrow icon
-The only existing test in `exercise1/leapyeartest.py` should fail
+- Command Palette (F1): **Python: Run All Tests** or 
+- Go to Test Explorer and click on the green arrow icon or
+- Run Ctrl+F5 in VS Code
+The only existing test in `tooling/test_leapyear.py` should fail
 
 ### .Net
 - Type "dotnet test" in terminal
-The only existing test in `exercise1/LeapYearTest.cs` should fail
+The only existing test in `tooling/LeapYearTest.cs` should fail
 
 ### Javascript / Vue.js
-- Type "npm test" in terminal
-The only existing test in `exercise1/leapyear.test.ts` should fail
+- Type "npm test" in terminal or
+- Run Ctrl+F5 in VS Code
+The only existing test in `tooling/test/leapyear.test.ts` should fail
 
 # Exercises
 
