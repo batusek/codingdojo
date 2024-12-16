@@ -32,6 +32,16 @@
             "console": "integratedTerminal"
         },
         {
+            "name": "Canonical TDD",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "canonical_tdd"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
             "name": "External dependencies",
             "type": "node",
             "request": "launch",
