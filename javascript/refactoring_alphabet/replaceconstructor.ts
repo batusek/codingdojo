@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
 
-// Simulating cloud storage with a file (replace with actual cloud storage implementation)
+// Simulating cloud storage with a file (imagine an actual cloud storage implementation)
 class CloudStorage {
   constructor(public name: string) {}
 

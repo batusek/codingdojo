@@ -20,7 +20,7 @@ export class Point {
   }
   
   export class CoordinateHelperAfter {
-    static distance_from_beginning(point) {
+    static distance_from_beginning(point: Point) {
       return Math.sqrt(point.x * point.x + point.y * point.y);
     }
   }
