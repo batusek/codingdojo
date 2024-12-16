@@ -12,6 +12,6 @@
 
 export class ColorEvaluator {
     static nearestColor(input: string): string {
-        return "red";
+        return input;
     }
 }
