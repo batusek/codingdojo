@@ -3,7 +3,7 @@ import { NumbersInWords } from "./numbers";
 
 // After start
 test.each([
-    [1, "one"],
+    [1, "one solution"],
     [2, "two"],
     [9, "nine"],
     [19, "nineteen"],
