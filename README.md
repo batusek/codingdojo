@@ -43,7 +43,13 @@ Instructions: [Numbers in words](http://codingdojo.org/kata/NumbersInWords/)
 ## Grow my code
 Start from scratch and grow your code with Red-Green-Refactor cycles. This exercise is a bit longer than the previous one. You probably start with only Red-Green for the first few tests. Over time you will observe that you added -Refactor to your flow - you code will call for it.
 
+Instructions: [Nearest color](https://codingdojo.org/kata/NearestColor/)
+
+## Canonical TDD
+The given kata is deliberately easy so that you can practice canonical TDD and naming your tests
+
 Instructions: [IPv6 address validator](https://www.codewars.com/kata/54fa4e210609868fce0002bf)
+
 
 ## Getting rid of external dependencies
 An existing code that calls some infrastructure code inside is available including an integration test. Rewrite the code 3 times using various techniques for getting rid of dependencies and using tiny and safe refactorings before you write more focused tests. The three methods:
