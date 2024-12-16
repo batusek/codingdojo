@@ -8,3 +8,7 @@ test("a red color given returns red", () => {
 test("a green color given returns green", () => {
     expect(ColorEvaluator.nearestColor("0f0")).toBe("0f0");
 })
+
+test("a blue color given returns blue", () => {
+    expect(ColorEvaluator.nearestColor("00f")).toBe("00f");
+})
