@@ -46,6 +46,19 @@
             "externalConsole": false,
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
+          },
+          {
+            "name": "Grow my code",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "dotnet",
+            "args": ["test"],
+            "cwd": "${workspaceRoot}/grow_my_code",
+            "externalConsole": false,
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
           }        
+
     ]
 }
