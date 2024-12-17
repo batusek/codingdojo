@@ -46,12 +46,12 @@ Instructions: [Numbers in words](http://codingdojo.org/kata/NumbersInWords/)
 ## Grow my code
 Start from scratch and grow your code with Red-Green-Refactor cycles. This exercise is a bit longer than the previous one. You probably start with only Red-Green for the first few tests. Over time you will observe that you added -Refactor to your flow - you code will call for it.
 
-Instructions: [Nearest color](https://codingdojo.org/kata/NearestColor/)
+Instructions: [IPv6 address validator](https://www.codewars.com/kata/54fa4e210609868fce0002bf)
 
 ## Canonical TDD
 The given kata is deliberately easy so that you can practice canonical TDD and naming your tests
 
-Instructions: [IPv6 address validator](https://www.codewars.com/kata/54fa4e210609868fce0002bf)
+Instructions: [Nearest color](https://codingdojo.org/kata/NearestColor/)
 
 
 ## Getting rid of external dependencies
@@ -63,11 +63,16 @@ An existing code that calls some infrastructure code inside is available includi
 ## Refactoring alphabet
 Practice a number of basic refactorings on focused examples.
 
+## Monster method
+Try this external kata on your language of choice 
+
+Instructions: [Gilded rose](http://codingdojo.org/kata/GildedRose/) 
+
 ## Getting rid of a global dependency
 Deal with a global dependency. Use incremental steps to create testable code.
 
 ## Testing a method with an irritating parameter
-Try two methods of testing an irritiating parameter
+Try two methods of testing an irritating parameter
 - pass null
 - extract interface
 
@@ -85,9 +90,6 @@ Eliminate a side effect so that a method can be tested
 
 [//]: <> (After start)
 # TODO
-## Exercise X - Refactor and existing class/method
-E.g. http://codingdojo.org/kata/GildedRose/
-
 ## Exercise X Get rid of dependency
 E.g. https://github.com/sandromancuso/trip-service-kata
 
