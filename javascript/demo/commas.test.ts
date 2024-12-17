@@ -8,3 +8,7 @@ test("one prints without comma", () => {
 test("ten prints without comma", () => {
     expect(formatNumber(10)).toEqual("10");
 })
+
+test("hundred prints without comma", () => {
+    expect(formatNumber(100)).toEqual("100");
+})
