@@ -34,6 +34,18 @@
             "externalConsole": false,
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
+          },
+          {
+            "name": "Baby steps",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "dotnet",
+            "args": ["test"],
+            "cwd": "${workspaceRoot}/baby_steps",
+            "externalConsole": false,
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
           }        
     ]
 }
