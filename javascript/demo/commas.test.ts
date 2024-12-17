@@ -20,3 +20,7 @@ test("thousand prints with one comma", () => {
 test("ten millions prints with two commas", () => {
     expect(formatNumber(10000000)).toEqual("10,000,000");
 })
+
+test("thirty five millions prints with two commas", () => {
+    expect(formatNumber(35353535)).toEqual("35,353,535");
+})
