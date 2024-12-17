@@ -46,6 +46,17 @@
             "internalConsoleOptions": "openOnSessionStart"
           },
           {
+            "name": "Canonical TDD",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": ["test"],
+            "cwd": "${workspaceRoot}/canonical_tdd",
+            "externalConsole": false,
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+          },
+          {
             "name": "Grow my code",
             "type": "coreclr",
             "request": "launch",
