@@ -5,12 +5,11 @@ export function formatNumber(number: number): string {
     if (number < 1000)
         return number.toString();
 
-    let temp: number = number;
     let result: string = "";
-    while (temp >= 1000) {
-        result = "," + formatGroup(temp%1000) + result;
-        temp = Math.floor(temp/1000);
+    while (number >= 1000) {
+        result = "," + formatGroup(number%1000) + result;
+        number = Math.floor(number/1000);
     }
 
-    return temp.toString() + result;
+    return number.toString() + result;
 }
