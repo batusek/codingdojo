@@ -9,3 +9,10 @@
 # Constraints:
 #  - practice canonical TDD preparing a list of testcases in advance and maintaining it
 #  - choose a test naming convention and keep it for the whole exercise
+
+class ColorEvaluator:
+    def __init__(self, color: str):
+        self.color = color
+        
+    def nearestColor(self) -> str:
+        return "f00"
