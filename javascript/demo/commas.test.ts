@@ -17,6 +17,10 @@ test("thousand prints with one comma", () => {
     expect(formatNumber(1000)).toEqual("1,000");
 })
 
+test("thousand-one prints with one comma", () => {
+    expect(formatNumber(1001)).toEqual("1,001");
+})
+
 test("ten millions prints with two commas", () => {
     expect(formatNumber(10000000)).toEqual("10,000,000");
 })
