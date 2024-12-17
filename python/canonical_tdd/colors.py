@@ -14,7 +14,7 @@ class ColorEvaluator:
     def __init__(self, color: str):
         self.color = color
         
-    def nearestColor(self) -> str:
+    def nearest_color(self) -> str:
         max_index = self._get_max_index(self.color)
         
         match max_index:
@@ -23,7 +23,7 @@ class ColorEvaluator:
             case 2: return "00f"
             case _: return ""  
     
-    def farthestColor(self) -> str:
+    def farthest_color(self) -> str:
         min_index = self._get_min_index(self.color)
         
         match min_index:
