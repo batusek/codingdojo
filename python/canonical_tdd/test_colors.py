@@ -14,3 +14,9 @@ class ColorEvaluatorTest(TestCase):
         
     def test_nearest_color_of_near_red_is_red(self):
         self.assertEqual(ColorEvaluator("edc").nearestColor(),"f00")                        
+        
+    def test_nearest_color_of_near_green_is_green(self):
+        self.assertEqual(ColorEvaluator("153").nearestColor(),"0f0")                                
+
+    def test_nearest_color_of_near_blue_is_blue(self):
+        self.assertEqual(ColorEvaluator("17d").nearestColor(),"00f")                                
