@@ -15,4 +15,4 @@ class ColorEvaluator:
         self.color = color
         
     def nearestColor(self) -> str:
-        return "f00"
+        return self.color
