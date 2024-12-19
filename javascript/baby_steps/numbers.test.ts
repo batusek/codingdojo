@@ -1,6 +1,8 @@
 import { expect, test } from 'vitest'
 import { NumbersInWords } from "./numbers";
 
+// Kata instructions: http://codingdojo.org/kata/NumbersInWords/
+
 // After start
 test.each([
     [1, "one solution"],

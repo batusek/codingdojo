@@ -1,4 +1,4 @@
-# Test excellence training
+# Technical excellence training
 
 # Instructions
 
