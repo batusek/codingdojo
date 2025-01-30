@@ -31,10 +31,17 @@ class Scrabble:
 
     def score(self, word: str) -> int:
         letters, *suffix = word.split("(")
+        score = self._letter_score(letters)
+        temp = self._apply_word_bonuses(word, score)
+
+        letters_used = len([char for char in letters if char in self.alphabet])
+        return temp if letters_used < 7 else temp + 50
+
+    def _letter_score(self, word: str) -> int:
         score: int = 0
         last_letter = ""
         last_letter_score = 0
-        for char in letters:
+        for char in word:
             if char in self.alphabet:
                 score += last_letter_score
                 last_letter = char
@@ -51,13 +58,8 @@ class Scrabble:
                 break
 
         score += self.alphabet[last_letter]
-        temp = self._apply_word_bonuses(word, score)
+        return score
 
-        letters_used = len([char for char in letters if char in self.alphabet])
-        return temp if letters_used < 7 else temp + 50
-
-    def _letter_score(self, word: str) -> int:
-        return 0
     def _apply_word_bonuses(self, word: str, raw_count: int) -> int:
         if word[-3:]=="(d)":
             return raw_count * 2
