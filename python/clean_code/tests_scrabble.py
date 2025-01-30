@@ -27,3 +27,12 @@ class TestScrabble(TestCase):
 
     def test_t_in_brackets_means_triple_word(self):
         self.assertEqual(Scrabble().score("hippo(t)"),36)
+
+    def test_caret_nulls_the_previous_letter(self):
+        self.assertEqual(Scrabble().score("mo^nkey"),14)
+
+    def test_caret_nulls_the_previous_double_letter(self):
+        self.assertEqual(Scrabble().score("mo*^nkey"),14)
+
+    def test_caret_nulls_the_previous_triple_letter(self):
+        self.assertEqual(Scrabble().score("mo**^nkey"),14)

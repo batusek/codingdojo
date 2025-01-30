@@ -31,18 +31,24 @@ class Scrabble:
         }
         result = 0
         last_letter = ""
+        last_letter_score = 0
         for char in word:
             if char in alphabet:
+                result += last_letter_score
                 last_letter = char
-                result += alphabet[char]
+                last_letter_score = alphabet[last_letter]
                 continue
 
             if char=="*":
-                result += alphabet[last_letter]
+                last_letter_score += alphabet[last_letter]
+
+            if char=="^":
+                result -= last_letter_score
 
             if char=="(":
                 break
 
+        result += alphabet[last_letter]
         return self._apply_word_bonuses(word, result)
 
     def _apply_word_bonuses(self, word: str, raw_count: int) -> int:
