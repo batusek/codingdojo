@@ -29,12 +29,14 @@ class Scrabble:
             'y': 4,
             'z': 10
         }
-        result = 0
+        score: int = 0
         last_letter = ""
         last_letter_score = 0
+        letters_used: int = 0
         for char in word:
             if char in alphabet:
-                result += last_letter_score
+                score += last_letter_score
+                letters_used += 1
                 last_letter = char
                 last_letter_score = alphabet[last_letter]
                 continue
@@ -43,13 +45,14 @@ class Scrabble:
                 last_letter_score += alphabet[last_letter]
 
             if char=="^":
-                result -= last_letter_score
+                score -= last_letter_score
 
             if char=="(":
                 break
 
-        result += alphabet[last_letter]
-        return self._apply_word_bonuses(word, result)
+        score += alphabet[last_letter]
+        temp = self._apply_word_bonuses(word, score)
+        return temp if letters_used < 7 else temp + 50
 
     def _apply_word_bonuses(self, word: str, raw_count: int) -> int:
         if word[-3:]=="(d)":

@@ -36,3 +36,6 @@ class TestScrabble(TestCase):
 
     def test_caret_nulls_the_previous_triple_letter(self):
         self.assertEqual(Scrabble().score("mo**^nkey"),14)
+
+    def test_using_all_letters_adds_a_bonus_of_50(self):
+        self.assertEqual(Scrabble().score("hamster"),62)
