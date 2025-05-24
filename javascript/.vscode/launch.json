@@ -5,7 +5,6 @@
             "name": "Roman Numerals kata",
             "type": "node",
             "request": "launch",
-            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
             "runtimeExecutable": "npm",
             "runtimeArgs": ["--silent", "test","--", "romannumerals"],
             "cwd": "${workspaceFolder}",
