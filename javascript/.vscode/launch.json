@@ -7,7 +7,7 @@
             "request": "launch",
             "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
             "runtimeExecutable": "npm",
-            "runtimeArgs": ["test","--", "romannumerals"],
+            "runtimeArgs": ["--silent", "test","--", "romannumerals"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
         },
