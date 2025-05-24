@@ -12,5 +12,11 @@ test("2 -> II", () => {
 test("3 ->  III", () => {
     expect(romanNumeral(3)).toEqual("III");
   })
+test("4-> IV", () => {
+  expect(romanNumeral(4)).toEqual("IV");
+})
+test("5-> V", () => {
+  expect(romanNumeral(5)).toEqual("V");
+})
 
 })
