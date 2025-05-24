@@ -2,6 +2,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Roman Numerals kata",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "romannumerals"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
             "name": "Run all tests",
             "type": "node",
             "request": "launch",
