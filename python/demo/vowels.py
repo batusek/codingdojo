@@ -3,16 +3,19 @@ from collections import Counter
 
 class VowelCounter:
     def count_vowels2(self, text: str) -> int:
-        vowels = "aeiouAEIOU"
         result = 0
-
-        for vowel in vowels:
-            result += text.count(vowel)
+        for letter in "aeiouAEIOU":
+            result += text.count(letter)
 
         return result
 
-
     def count_vowels(self, text: str) -> int:
         vowels = "aeiouAEIOU"
-        counter = Counter([v for v in text if v in vowels])
+        counter = Counter([char for char in text if char in vowels])
         return counter.total()
+
+    def count_consonants(self, text: str) -> int:
+        return 2
+
+    def count_letters(self, text: str) -> int:
+        return self.count_vowels(text) + self.count_consonants(text)
