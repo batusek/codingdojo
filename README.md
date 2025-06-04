@@ -1,4 +1,4 @@
-# Test excellence training
+# Technical excellence training
 
 This repository is an add on to the one day [Test-Driven Development training](https://batusek.cz/en/domu-cestina/trainings/test-driven-development/)
 

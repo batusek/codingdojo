@@ -23,6 +23,15 @@
             "console": "integratedTerminal"
         },        
         {
+            "name": "Canonical TDD",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","canonical_tdd"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
             "name": "External dependencies",
             "type": "debugpy",
             "request": "launch",

@@ -129,6 +129,16 @@
             "runtimeArgs": ["test","--", "tooling"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
-        }
-     ]
+        },
+        {
+            "name": "TDD demo",
+            "type": "node",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["test","--", "demo"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+    ]
 }
