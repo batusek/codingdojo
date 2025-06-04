@@ -1,0 +1,132 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Baby steps",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","baby_steps"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Blob",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","blob"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Canonical TDD",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","canonical_tdd"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "External dependencies",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","external_dependencies"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Global state",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","global_state"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Grow my code",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","grow_my_code"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Irritating parameter",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","irritating_parameter"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Legacy intro",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","legacy_intro"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Refactoring alphabet",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","refactoring_alphabet"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Side effect",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","side_effect"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Tooling setup",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","tooling"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "Run all tests",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","-v"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
+            "name": "TDD demo",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","demo"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+       {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+   ]
+}
