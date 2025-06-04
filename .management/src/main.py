@@ -33,6 +33,7 @@ def python():
     # no adaptation needed for baby steps yet
     adaptFile("python/blob/worldbank.py")
     adaptFile("python/blob/test_worldbank.py")
+    adaptFile("python/external_dependencies/htmlformatter.py")
     adaptFile("python/external_dependencies/test_htmlformatter.py")
     adaptFile("python/global_state/globalstate.py")
     adaptFile("python/global_state/test_globalstate.py")
