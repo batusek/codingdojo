@@ -44,9 +44,15 @@ class Scrabble:
     def _calculate_base_score(self, word: str) -> int:
         score = 0
         i = 0
+        last_score = 0
         while i < len(word):
             letter = word[i]
             if letter == '*':
+                i += 1
+                continue
+            if letter == '^':
+                score -= last_score
+                last_score = 0
                 i += 1
                 continue
 
@@ -58,5 +64,6 @@ class Scrabble:
                 letter_multiplier += 1
                 i += 1
             
-            score += letter_score * letter_multiplier
+            last_score = letter_score * letter_multiplier
+            score += last_score
         return score

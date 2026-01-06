@@ -36,3 +36,6 @@ class TestScrabble(TestCase):
 
     def test_triple_word_bonus(self):
         self.assertEqual(Scrabble().score("tiger(t)"), 18)
+
+    def test_blank_nullifies_previous_letter(self):
+        self.assertEqual(Scrabble().score("he^llo"), 7)
