@@ -32,8 +32,15 @@ class Scrabble:
     def score(self, word: str) -> int:
         score = 0
         i = 0
-        while i < len(word):
-            letter = word[i]
+
+        word_multiplier = 1
+        actual_word = word
+        if word.endswith('(d)'):
+            word_multiplier = 2
+            actual_word = word[:-3]
+
+        while i < len(actual_word):
+            letter = actual_word[i]
             if letter == '*':
                 i += 1
                 continue
@@ -41,9 +48,9 @@ class Scrabble:
             letter_score = self.alphabet[letter]
             multiplier = 1
             i += 1
-            while i < len(word) and word[i] == '*':
+            while i < len(actual_word) and actual_word[i] == '*':
                 multiplier += 1
                 i += 1
             
             score += letter_score * multiplier
-        return score
+        return score * word_multiplier

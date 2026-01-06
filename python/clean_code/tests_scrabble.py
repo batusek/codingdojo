@@ -30,3 +30,6 @@ class TestScrabble(TestCase):
 
     def test_long_word_with_bonuses(self):
         self.assertEqual(Scrabble().score("he*l**lo"), 11)
+
+    def test_double_word_bonus(self):
+        self.assertEqual(Scrabble().score("hippo(d)"), 24)
