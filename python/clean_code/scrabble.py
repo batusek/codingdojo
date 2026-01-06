@@ -32,7 +32,14 @@ class Scrabble:
     def score(self, word: str) -> int:
         word_multiplier, actual_word = self._parse_word_bonuses(word)
         base_score = self._calculate_base_score(actual_word)
-        return base_score * word_multiplier
+        
+        letter_count = len(actual_word.replace('*', '').replace('^', ''))
+        
+        bonus = 0
+        if letter_count == 7:
+            bonus = 50
+            
+        return base_score * word_multiplier + bonus
 
     def _parse_word_bonuses(self, word: str) -> tuple[int, str]:
         if word.endswith('(d)'):

@@ -42,3 +42,6 @@ class TestScrabble(TestCase):
 
     def test_bonus_combination(self):
         self.assertEqual(Scrabble().score("do*^g"), 4)
+
+    def test_seven_letter_bonus(self):
+        self.assertEqual(Scrabble().score("amazing"), 69)
