@@ -32,6 +32,15 @@
             "console": "integratedTerminal"
         },        
         {
+            "name": "Clean code",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["discover","clean_code"],
+            "module": "unittest",
+            "cwd": "${workspaceFolder}/",
+            "console": "integratedTerminal"
+        },        
+        {
             "name": "External dependencies",
             "type": "debugpy",
             "request": "launch",
