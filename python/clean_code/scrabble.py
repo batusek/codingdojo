@@ -30,4 +30,7 @@ class Scrabble:
     }
 
     def score(self, word: str) -> int:
-        return 0
+        score = 0
+        for letter in word:
+            score += self.alphabet[letter]
+        return score
