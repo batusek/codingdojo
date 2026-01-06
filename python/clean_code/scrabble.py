@@ -30,4 +30,37 @@ class Scrabble:
     }
 
     def score(self, word: str) -> int:
-        return 0
+        word_multiplier = 1
+        if word.endswith('(d)'):
+            word_multiplier = 2
+            word = word[:-3]
+        if word.endswith('(t)'):
+            word_multiplier = 3
+            word = word[:-3]
+
+        clean_word = word.replace('*', '').replace('^', '')
+        bonus = 0
+        if len(clean_word) == 7:
+            bonus = 50
+
+        total = 0
+        word_iterator = iter(range(len(word)))
+        for i in word_iterator:
+            letter = word[i]
+            score = self.alphabet.get(letter, 0)
+
+            if i + 1 < len(word) and word[i + 1] == '*':
+                if i + 2 < len(word) and word[i + 2] == '*':
+                    score *= 3
+                    next(word_iterator, None)
+                    next(word_iterator, None)
+                else:
+                    score *= 2
+                    next(word_iterator, None)
+            
+            if i + 1 < len(word) and word[i+1] == '^':
+                score = 0
+                next(word_iterator, None)
+
+            total += score
+        return total * word_multiplier + bonus
