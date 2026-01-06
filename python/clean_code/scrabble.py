@@ -31,6 +31,11 @@ class Scrabble:
 
     def score(self, word: str) -> int:
         score = 0
+        last_score = 0
         for letter in word:
-            score += self.alphabet[letter]
+            if letter == '*':
+                score += last_score
+            else:
+                last_score = self.alphabet[letter]
+                score += last_score
         return score

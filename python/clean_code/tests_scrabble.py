@@ -21,3 +21,6 @@ class TestScrabble(TestCase):
 
     def test_empty_string_counts_as_zero(self):
         self.assertEqual(Scrabble().score(""), 0)
+
+    def test_double_letter_bonus(self):
+        self.assertEqual(Scrabble().score("a*"), 2)
