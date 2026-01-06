@@ -39,3 +39,6 @@ class TestScrabble(TestCase):
 
     def test_blank_nullifies_previous_letter(self):
         self.assertEqual(Scrabble().score("he^llo"), 7)
+
+    def test_bonus_combination(self):
+        self.assertEqual(Scrabble().score("do*^g"), 4)
