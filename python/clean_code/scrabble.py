@@ -30,30 +30,33 @@ class Scrabble:
     }
 
     def score(self, word: str) -> int:
+        word_multiplier, actual_word = self._parse_word_bonuses(word)
+        base_score = self._calculate_base_score(actual_word)
+        return base_score * word_multiplier
+
+    def _parse_word_bonuses(self, word: str) -> tuple[int, str]:
+        if word.endswith('(d)'):
+            return 2, word[:-3]
+        if word.endswith('(t)'):
+            return 3, word[:-3]
+        return 1, word
+
+    def _calculate_base_score(self, word: str) -> int:
         score = 0
         i = 0
-
-        word_multiplier = 1
-        actual_word = word
-        if word.endswith('(d)'):
-            word_multiplier = 2
-            actual_word = word[:-3]
-        elif word.endswith('(t)'):
-            word_multiplier = 3
-            actual_word = word[:-3]
-
-        while i < len(actual_word):
-            letter = actual_word[i]
+        while i < len(word):
+            letter = word[i]
             if letter == '*':
                 i += 1
                 continue
 
             letter_score = self.alphabet[letter]
-            multiplier = 1
+            
             i += 1
-            while i < len(actual_word) and actual_word[i] == '*':
-                multiplier += 1
+            letter_multiplier = 1
+            while i < len(word) and word[i] == '*':
+                letter_multiplier += 1
                 i += 1
             
-            score += letter_score * multiplier
-        return score * word_multiplier
+            score += letter_score * letter_multiplier
+        return score
