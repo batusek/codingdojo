@@ -38,6 +38,9 @@ class Scrabble:
         if word.endswith('(d)'):
             word_multiplier = 2
             actual_word = word[:-3]
+        elif word.endswith('(t)'):
+            word_multiplier = 3
+            actual_word = word[:-3]
 
         while i < len(actual_word):
             letter = actual_word[i]

@@ -33,3 +33,6 @@ class TestScrabble(TestCase):
 
     def test_double_word_bonus(self):
         self.assertEqual(Scrabble().score("hippo(d)"), 24)
+
+    def test_triple_word_bonus(self):
+        self.assertEqual(Scrabble().score("tiger(t)"), 18)
