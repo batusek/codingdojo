@@ -24,3 +24,6 @@ class TestScrabble(TestCase):
 
     def test_double_letter_bonus(self):
         self.assertEqual(Scrabble().score("a*"), 2)
+
+    def test_triple_letter_bonus(self):
+        self.assertEqual(Scrabble().score("a**"), 3)

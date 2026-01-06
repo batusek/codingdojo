@@ -31,11 +31,19 @@ class Scrabble:
 
     def score(self, word: str) -> int:
         score = 0
-        last_score = 0
-        for letter in word:
+        i = 0
+        while i < len(word):
+            letter = word[i]
             if letter == '*':
-                score += last_score
-            else:
-                last_score = self.alphabet[letter]
-                score += last_score
+                i += 1
+                continue
+
+            letter_score = self.alphabet[letter]
+            multiplier = 1
+            i += 1
+            while i < len(word) and word[i] == '*':
+                multiplier += 1
+                i += 1
+            
+            score += letter_score * multiplier
         return score
